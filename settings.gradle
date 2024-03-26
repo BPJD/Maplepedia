@@ -1,0 +1,24 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            name "Huvle"
+            url "https://sdk.huvle.com/repository/internal"
+        }
+
+        maven { url 'https://jitpack.io' }
+
+    }
+}
+
+rootProject.name = "MaplePedia_BigPillar"
+include ':app'

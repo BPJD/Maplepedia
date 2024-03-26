@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/classButton_margin">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/BossButton"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_margin="4dp"
+        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+        android:autoSizeMinTextSize="10dp"
+        android:autoSizeTextType="uniform"
+        android:background="@drawable/button_design"
+        android:backgroundTint="@color/bg_button"
+        android:onClick="bossButtonClicked"
+        android:padding="@dimen/classButton_margin"
+        android:tag="0"
+        android:text="text"
+        android:textColor="@color/contentColor" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        />
+
+
+</LinearLayout>

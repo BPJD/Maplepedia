@@ -1,0 +1,95 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.gms.google-services'
+
+    // Add the Crashlytics Gradle plugin
+    id("com.google.firebase.crashlytics")
+}
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.wicom.maplepedia"
+        targetSdk 34
+        versionCode 435
+        versionName '24.0.4'
+        minSdk 24
+        //compileSdkPreview = "UpsideDownCake"
+
+        //testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            ndk {
+                debugSymbolLevel 'SYMBOL_TABLE'
+            }
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            ndk {
+                debugSymbolLevel 'SYMBOL_TABLE'
+            }
+        }
+    }
+    compileOptions {
+        sourceCompatibility kotlin_version
+        targetCompatibility kotlin_version
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    namespace 'com.wicom.maplepedia'
+    buildToolsVersion '33.0.2'
+    
+// 뷰 바인딩 옵션 활성화
+    viewBinding {
+        enabled = true
+    }
+
+
+}
+
+
+
+
+dependencies {
+    implementation platform('com.google.firebase:firebase-bom:32.7.0')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+
+    // Add the dependencies for the Crashlytics and Analytics libraries
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation("com.google.firebase:firebase-crashlytics")
+    implementation("com.google.firebase:firebase-analytics")
+
+    implementation 'com.opencsv:opencsv:5.7.1'
+    implementation 'androidx.core:core-ktx:1.10.1'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    /**
+     * huvle sdk , play-service-ads
+     */
+    implementation 'com.google.android.gms:play-services-ads:20.5.0'
+    implementation 'com.byappsoft.sap:HuvleSDK:6.1.6.3'
+    implementation 'com.adknowva.adlib:AdknowvaAdLib:1.5.2'
+
+
+
+}
+
+dependencies {
+    implementation 'com.github.adxcorp:adpie-android-sdk:1.13.1'
+    implementation 'com.google.android.gms:play-services-ads-identifier:16.0.0'
+}

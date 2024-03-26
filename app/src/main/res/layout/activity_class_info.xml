@@ -1,0 +1,908 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/background_up"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_color_up"
+        android:scaleType="centerCrop"
+        android:tint="#5A00FF"
+        tools:ignore="UseAppTint"/>
+    <ImageView
+        android:id="@+id/background_down"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_color_down"
+        android:scaleType="centerCrop"
+        android:tint="#00FFFF"
+        tools:ignore="UseAppTint" />
+
+    <LinearLayout
+        android:id="@+id/activity_name"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/adLout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/class_info_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Class_Name"
+                android:textColor="@color/contentColor"
+                android:textSize="@dimen/menuName_TextSize"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                />
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/activity_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/classInfo_viewsMargin">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="1000">
+
+                    <ImageView
+                        android:id="@+id/class_info_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="500"
+                        android:scaleType="centerCrop"
+                        android:forceHasOverlappingRendering="true"
+                        android:src="@drawable/class_null" />
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="500">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:orientation="horizontal"
+                            android:weightSum="100">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/classInfo_infoSize"
+                                android:layout_weight="20"
+                                android:orientation="vertical"
+                                android:weightSum="6">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="right|center"
+                                    android:text="직업군"
+                                    android:textColor="@color/contentColor"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="right|center"
+                                    android:text="직업 계열"
+                                    android:textColor="@color/contentColor"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="right|center"
+                                    android:text="주 무기"
+                                    android:textColor="@color/contentColor"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="right|center"
+                                    android:text="보조 무기"
+                                    android:textColor="@color/contentColor"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="right|center"
+                                    android:text="주 스탯"
+                                    android:textColor="@color/contentColor"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="right|center"
+                                    android:text="부 스탯"
+                                    android:textColor="@color/contentColor"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/classInfo_infoSize"
+                                android:layout_weight="10"
+                                android:orientation="vertical"
+                                android:weightSum="6">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="  :  "
+                                    android:textColor="@color/contentColor" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=":"
+                                    android:textColor="@color/contentColor" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=":"
+                                    android:textColor="@color/contentColor" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=":"
+                                    android:textColor="@color/contentColor" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=":"
+                                    android:textColor="@color/contentColor" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=":"
+                                    android:textColor="@color/contentColor" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/classInfo_infoSize"
+                                android:layout_weight="70"
+                                android:orientation="vertical"
+                                android:paddingRight="20dp"
+                                android:weightSum="6">
+
+                                <TextView
+                                    android:id="@+id/class_info_faction"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="left|center"
+                                    android:text="Class_Faction"
+                                    android:textColor="@color/contentColor" />
+
+                                <TextView
+                                    android:id="@+id/class_info_type"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="left|center"
+                                    android:text="Class_Type"
+                                    android:textColor="@color/contentColor" />
+
+                                <TextView
+                                    android:id="@+id/class_info_mainWeapon"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="left|center"
+                                    android:text="Class_MainWeaponnnnnnnnnnnnnnnnnnn"
+                                    android:textColor="@color/contentColor" />
+
+                                <TextView
+                                    android:id="@+id/class_info_subWeapon"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="left|center"
+                                    android:text="Class_SubWeapon"
+                                    android:textColor="@color/contentColor" />
+
+                                <TextView
+                                    android:id="@+id/class_info_mainStat"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="left|center"
+                                    android:text="Class_MainStat"
+                                    android:textColor="@color/contentColor" />
+
+                                <TextView
+                                    android:id="@+id/class_info_subStat"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="left|center"
+                                    android:text="Class_SubStat"
+                                    android:textColor="@color/contentColor" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_margin="10dp"
+                    android:background="@color/contentColor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/app_design_background"
+                    android:backgroundTint="@color/backgroundColor"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/classInfo_viewsMargin"
+                        android:text="능력치"
+                        android:textColor="@color/contentColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal"
+                        android:weightSum="100">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="35"
+                            android:gravity="center|right"
+                            android:text="크리티컬 확률"
+                            android:textColor="@color/contentColor"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="46"
+                            android:gravity="center"
+                            android:text=":"
+                            android:textColor="@color/contentColor"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/class_status_criRate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="22"
+                            android:autoSizeMinTextSize="10dp"
+                            android:autoSizeTextType="uniform"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:text="class_status_criRate"
+                            android:textColor="@color/contentColor" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/classInfo_infoMarginTop"
+                    android:background="@drawable/app_design_background"
+                    android:backgroundTint="@color/backgroundColor"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/classInfo_viewsMargin"
+                        android:text="직업 특성"
+                        android:textColor="@color/contentColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/class_info_identityPos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"></LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/classInfo_infoMarginTop"
+                    android:background="@drawable/app_design_background"
+                    android:backgroundTint="@color/backgroundColor"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="유니온 효과"
+                        android:textColor="@color/contentColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/classInfo_viewsMargin"
+                        android:layout_marginTop="@dimen/classInfo_infoMarginTop"
+                        android:layout_marginRight="@dimen/classInfo_viewsMargin"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/class_union_Desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="class_union_Desc"
+                            android:textColor="@color/contentColor"
+                            android:textSize="16dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="@dimen/classInfo_viewsMargin"
+                            android:layout_marginRight="10dp"
+                            android:orientation="horizontal"
+                            android:weightSum="5">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="B"
+                                android:textColor="@color/contentColor"
+                                android:textSize="16dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="A"
+                                android:textColor="@color/contentColor"
+                                android:textSize="16dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="S"
+                                android:textColor="@color/contentColor"
+                                android:textSize="16dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="SS"
+                                android:textColor="@color/contentColor"
+                                android:textSize="16dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="SSS"
+                                android:textColor="@color/contentColor"
+                                android:textSize="16dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:orientation="horizontal"
+                            android:weightSum="5">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Lv60"
+                                android:textColor="@color/contentColor" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Lv100"
+                                android:textColor="@color/contentColor" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Lv140"
+                                android:textColor="@color/contentColor" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Lv200"
+                                android:textColor="@color/contentColor" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Lv250"
+                                android:textColor="@color/contentColor" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="@dimen/classButton_margin"
+                            android:layout_marginRight="10dp"
+                            android:orientation="horizontal"
+                            android:weightSum="5">
+
+                            <TextView
+                                android:id="@+id/class_union_B"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="10%"
+                                android:textColor="@color/contentColor"
+                                android:textSize="17dp" />
+
+                            <TextView
+                                android:id="@+id/class_union_A"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="20%"
+                                android:textColor="@color/contentColor"
+                                android:textSize="17dp" />
+
+                            <TextView
+                                android:id="@+id/class_union_S"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="30%"
+                                android:textColor="@color/contentColor"
+                                android:textSize="17dp" />
+
+                            <TextView
+                                android:id="@+id/class_union_SS"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="40%"
+                                android:textColor="@color/contentColor"
+                                android:textSize="17dp" />
+
+                            <TextView
+                                android:id="@+id/class_union_SSS"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="50%"
+                                android:textColor="@color/contentColor"
+                                android:textSize="17dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/classInfo_infoMarginTop"
+                        android:layout_marginBottom="@dimen/classInfo_viewsMargin"
+                        android:text="링크 스킬"
+                        android:textColor="@color/contentColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/class_info_linkIcon"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/skill_null" />
+
+                        <TextView
+                            android:id="@+id/class_info_linkName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="4dp"
+                            android:text="class_info_linkName"
+                            android:textColor="@color/contentColor" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/class_info_linkInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="4dp"
+                        android:text="class_info_linkInfo"
+                        android:textColor="@color/contentColor" />
+
+                    <TextView
+                        android:id="@+id/class_info_linkDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="4dp"
+                        android:text="class_info_linkDesc"
+                        android:textColor="@color/contentColor" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_margin="10dp"
+                    android:background="@color/contentColor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/app_design_background"
+                    android:backgroundTint="@color/backgroundColor"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="스킬 정보"
+                        android:textColor="@color/contentColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <TabHost
+                        android:id="@android:id/tabhost"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        tools:context=".MainActivity">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TabWidget
+                                android:id="@android:id/tabs"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                            </TabWidget>
+
+                            <FrameLayout
+                                android:id="@android:id/tabcontent"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:id="@+id/class_info_skillTab1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:id="@+id/class_info_skillPos0"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/skillTierText0"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/classInfo_infoMarginTop"
+                                            android:padding="@dimen/classInfo_viewsMargin"
+                                            android:text="기본 스킬"
+                                            android:textColor="@color/contentColor"
+                                            android:textSize="18dp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/class_info_skillPos1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/skillTierText1"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/classInfo_infoMarginTop"
+                                            android:padding="@dimen/classInfo_viewsMargin"
+                                            android:text="1차 스킬"
+                                            android:textColor="@color/contentColor"
+                                            android:textSize="18dp"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/class_info_skillTab2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:id="@+id/class_info_skillPos2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/skillTierText2"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/classInfo_infoMarginTop"
+                                            android:padding="@dimen/classInfo_viewsMargin"
+                                            android:text="2차 스킬"
+                                            android:textColor="@color/contentColor"
+                                            android:textSize="18dp"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/class_info_skillPos3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/skillTierText3"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/classInfo_infoMarginTop"
+                                            android:padding="@dimen/classInfo_viewsMargin"
+                                            android:text="3차 스킬"
+                                            android:textColor="@color/contentColor"
+                                            android:textSize="18dp"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/class_info_skillTab3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:id="@+id/class_info_skillPos4"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/skillTierText4"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/classInfo_infoMarginTop"
+                                            android:padding="@dimen/classInfo_viewsMargin"
+                                            android:text="4차 스킬"
+                                            android:textColor="@color/contentColor"
+                                            android:textSize="18dp"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/class_info_skillPosH"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/skillTierTextH"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/classInfo_infoMarginTop"
+                                            android:padding="@dimen/classInfo_viewsMargin"
+                                            android:text="하이퍼 스킬"
+                                            android:textColor="@color/contentColor"
+                                            android:textSize="18dp"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/class_info_skillTab4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/skillTierText5"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/classInfo_infoMarginTop"
+                                        android:padding="@dimen/classInfo_viewsMargin"
+                                        android:text="5차 스킬"
+                                        android:textColor="@color/contentColor"
+                                        android:textSize="18dp"
+                                        android:textStyle="bold" />
+
+                                    <androidx.appcompat.widget.AppCompatToggleButton
+                                        android:id="@+id/VCoreHide"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="65dp"
+                                        android:layout_margin="4dp"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+                                        android:backgroundTint="@color/bg_button"
+                                        android:checked="false"
+                                        android:padding="@dimen/classButton_margin"
+                                        android:textColor="@color/contentColor"
+                                        android:textOff="강화 코어 보기"
+                                        android:textOn="강화 코어 숨기기" />
+
+                                    <LinearLayout
+                                        android:id="@+id/class_info_skillPos5_1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:visibility="gone">
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/class_info_skillPos5"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/class_info_skillPos6"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/skillTierText6"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/classInfo_infoMarginTop"
+                                            android:padding="@dimen/classInfo_viewsMargin"
+                                            android:text="6차 스킬"
+                                            android:textColor="@color/contentColor"
+                                            android:textSize="18dp"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </FrameLayout>
+                        </LinearLayout>
+                    </TabHost>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/adLout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:paddingTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.gms.ads.admanager.AdManagerAdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adManagerAdView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/googleAD">
+        </com.google.android.gms.ads.admanager.AdManagerAdView>
+
+        <com.adknowva.adlib.BannerAdView
+            android:id="@+id/banner_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            />
+
+        <com.gomfactory.adpie.sdk.AdView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/adpie_Tbanner"
+            android:layout_centerHorizontal="true"
+            slotID="653874a28c8d1d33fcd63fd6" >
+        </com.gomfactory.adpie.sdk.AdView>
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

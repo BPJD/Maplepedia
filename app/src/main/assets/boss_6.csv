@@ -1,0 +1,7 @@
+bossName,bossDifficulty,bossReqQuest,bossReqLevel,bossLevel, bossHP ,bossHPStr,bossHPperPhase,isHpRevision,bossDef,bossForce,rewardItem1,rewardItem1Name,rewardItem2,rewardItem2Name,rewardItem3,rewardItem3Name,rewardItem4,rewardItem4Name,bossPattern1,bossPattern2,bossPattern3,bossPattern4,bossTip
+카웅,노말,루더스 호수 - [지구방위본부],180,180," 1,680,000,000 ",16억 8000만,0,1,40,아케인/어센틱 없음,04001886,약 70만 메소,,,,,,,닥터 그레이가 바닥에 장판을 설치합니다.\\n장판 위에 있을 때 허약 상태이상,,,,"카웅이 드롭하는 [카웅 부품] 을 판매하면, 신규/복귀 유저에게 도움이 될 정도로 많은 양의 메소를 얻을 수 있습니다."
+,,,,,,,,,,,02000004,엘릭서,,,,,,,장판이 생기기 전에 날아다니는 플라스크에 맞을 경우\\n최대 체력의 10% 피해,,,,
+,,,,,,,,,,,04009380,카웅 부품,,,,,,,메소레인저 핑크 피규어를 떨어트립니다.\\n스턴 상태이상,,,,
+,,,,,,,,,,,,,,,,,,,청소용 솔을 소환해 범위 공격을 합니다. 소환된 솔은 30초 후 사라집니다.\\n최대 체력의 10% 피해\\n(솔 체력 : 약 660만),,,,
+,,,,,,,,,,,,,,,,,,,카웅의 눈이 보라색으로 변한 후 광선을 발사합니다.\\n공격이 불가능해짐,,,,
+,,,,,,,,,,,,,,,,,,,하얀 거품이 나는 기계팔을 바닥에 댄 뒤 돌진합니다.\\n즉사 피해,,,,

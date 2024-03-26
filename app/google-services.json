@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "974196858259",
+    "firebase_url": "https://admob-app-id-1918955683.firebaseio.com",
+    "project_id": "admob-app-id-1918955683",
+    "storage_bucket": "admob-app-id-1918955683.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:974196858259:android:3c2e32858974e378c41c66",
+        "android_client_info": {
+          "package_name": "com.wicom.maplepedia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "974196858259-1vuvsghe28v81rt32amniknlbhdndhg9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCL0kY0uwgvXt0ue1zm1XAX7eJnS2hwpDM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "974196858259-1vuvsghe28v81rt32amniknlbhdndhg9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

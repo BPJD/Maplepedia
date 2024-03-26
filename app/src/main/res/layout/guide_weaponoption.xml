@@ -1,0 +1,856 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/background_up"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_color_up"
+        android:scaleType="centerCrop"
+        android:tint="#F9FFC4"
+        tools:ignore="UseAppTint"/>
+    <ImageView
+        android:id="@+id/background_down"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_color_down"
+        android:scaleType="centerCrop"
+        android:tint="#EDFFC1"
+        tools:ignore="UseAppTint" />
+
+    <LinearLayout
+        android:id="@+id/activity_name"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/adLout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textSize="25dp"
+                android:textColor="@color/contentColor"
+                android:gravity="center"
+                android:padding="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="무기 공격력 추옵 정보" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TabHost
+                android:id="@android:id/tabhost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TabWidget
+                        android:id="@android:id/tabs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                    </TabWidget>
+
+
+                    <FrameLayout
+                        android:id="@android:id/tabcontent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/TabAbsol"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="100"
+                                >
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_weight="10"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/class_null"/>
+
+                                <TextView
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:layout_weight="10"
+                                    android:textColor="@color/contentColor"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="10"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:textSize="16dp"
+                                    android:textColor="@color/contentColor"/>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="60"
+                                    android:textSize="16dp"
+                                    android:weightSum="9">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="5추"
+                                        android:layout_weight="1"
+                                        android:textSize="16dp"
+                                        android:textColor="@color/contentColor"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=" / "
+                                        android:layout_weight="1"
+                                        android:textSize="16dp"
+                                        android:textColor="@color/contentColor"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="4추"
+                                        android:layout_weight="1"
+                                        android:textSize="16dp"
+                                        android:textColor="@color/contentColor"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=" / "
+                                        android:layout_weight="1"
+                                        android:textSize="16dp"
+                                        android:textColor="@color/contentColor"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="3추"
+                                        android:layout_weight="1"
+                                        android:textSize="16dp"
+                                        android:textColor="@color/contentColor"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=" / "
+                                        android:layout_weight="1"
+                                        android:textSize="16dp"
+                                        android:textColor="@color/contentColor"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="2추"
+                                        android:layout_weight="1"
+                                        android:textSize="16dp"
+                                        android:textColor="@color/contentColor"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=" / "
+                                        android:layout_weight="1"
+                                        android:textColor="@color/contentColor"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="1추"
+                                        android:layout_weight="1"
+                                        android:textSize="16dp"
+                                        android:textColor="@color/contentColor"/>
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/TabAbsolPos1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/classInfo_viewsMargin"
+                                    android:text="전사"
+                                    android:textColor="@color/contentColor"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/TabAbsolPos2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classInfo_infoMarginTop"
+                                    android:padding="@dimen/classInfo_viewsMargin"
+                                    android:text="마법사"
+                                    android:textColor="@color/contentColor"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/TabAbsolPos3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classInfo_infoMarginTop"
+                                    android:padding="@dimen/classInfo_viewsMargin"
+                                    android:text="궁수"
+                                    android:textColor="@color/contentColor"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/TabAbsolPos4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classInfo_infoMarginTop"
+                                    android:padding="@dimen/classInfo_viewsMargin"
+                                    android:text="도적"
+                                    android:textColor="@color/contentColor"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/TabAbsolPos5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classInfo_infoMarginTop"
+                                    android:padding="@dimen/classInfo_viewsMargin"
+                                    android:text="해적"
+                                    android:textColor="@color/contentColor"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/TabArcane"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="100"
+                                >
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_weight="10"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/class_null"/>
+
+                                <TextView
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:layout_weight="10"
+                                    android:textColor="@color/contentColor"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="10"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:textSize="16dp"
+                                    android:textColor="@color/contentColor"/>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="60"
+                                    android:textSize="16dp"
+                                    android:weightSum="9">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="5추"
+                                        android:layout_weight="1"
+                                        android:textSize="16dp"
+                                        android:textColor="@color/contentColor"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=" / "
+                                        android:layout_weight="1"
+                                        android:textSize="16dp"
+                                        android:textColor="@color/contentColor"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="4추"
+                                        android:layout_weight="1"
+                                        android:textSize="16dp"
+                                        android:textColor="@color/contentColor"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=" / "
+                                        android:layout_weight="1"
+                                        android:textSize="16dp"
+                                        android:textColor="@color/contentColor"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="3추"
+                                        android:layout_weight="1"
+                                        android:textSize="16dp"
+                                        android:textColor="@color/contentColor"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=" / "
+                                        android:layout_weight="1"
+                                        android:textSize="16dp"
+                                        android:textColor="@color/contentColor"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="2추"
+                                        android:layout_weight="1"
+                                        android:textSize="16dp"
+                                        android:textColor="@color/contentColor"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=" / "
+                                        android:layout_weight="1"
+                                        android:textColor="@color/contentColor"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="1추"
+                                        android:layout_weight="1"
+                                        android:textSize="16dp"
+                                        android:textColor="@color/contentColor"/>
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/TabArcanePos1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/classInfo_viewsMargin"
+                                    android:text="전사"
+                                    android:textColor="@color/contentColor"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/TabArcanePos2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classInfo_infoMarginTop"
+                                    android:padding="@dimen/classInfo_viewsMargin"
+                                    android:text="마법사"
+                                    android:textColor="@color/contentColor"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/TabArcanePos3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classInfo_infoMarginTop"
+                                    android:padding="@dimen/classInfo_viewsMargin"
+                                    android:text="궁수"
+                                    android:textColor="@color/contentColor"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/TabArcanePos4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classInfo_infoMarginTop"
+                                    android:padding="@dimen/classInfo_viewsMargin"
+                                    android:text="도적"
+                                    android:textColor="@color/contentColor"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/TabArcanePos5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classInfo_infoMarginTop"
+                                    android:padding="@dimen/classInfo_viewsMargin"
+                                    android:text="해적"
+                                    android:textColor="@color/contentColor"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/TabGenesis"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="100"
+                                >
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_weight="10"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/class_null"/>
+
+                                <TextView
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:layout_weight="10"
+                                    android:textColor="@color/contentColor"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="10"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:textSize="16dp"
+                                    android:textColor="@color/contentColor"/>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="60"
+                                    android:textSize="16dp"
+                                    android:weightSum="9">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="5추"
+                                        android:layout_weight="1"
+                                        android:textSize="16dp"
+                                        android:textColor="@color/contentColor"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=" / "
+                                        android:layout_weight="1"
+                                        android:textSize="16dp"
+                                        android:textColor="@color/contentColor"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="4추"
+                                        android:layout_weight="1"
+                                        android:textSize="16dp"
+                                        android:textColor="@color/contentColor"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=" / "
+                                        android:layout_weight="1"
+                                        android:textSize="16dp"
+                                        android:textColor="@color/contentColor"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="3추"
+                                        android:layout_weight="1"
+                                        android:textSize="16dp"
+                                        android:textColor="@color/contentColor"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=" / "
+                                        android:layout_weight="1"
+                                        android:textSize="16dp"
+                                        android:textColor="@color/contentColor"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="2추"
+                                        android:layout_weight="1"
+                                        android:textSize="16dp"
+                                        android:textColor="@color/contentColor"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=" / "
+                                        android:layout_weight="1"
+                                        android:textColor="@color/contentColor"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="1추"
+                                        android:layout_weight="1"
+                                        android:textSize="16dp"
+                                        android:textColor="@color/contentColor"/>
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/TabGenesisPos1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/classInfo_viewsMargin"
+                                    android:text="전사"
+                                    android:textColor="@color/contentColor"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/TabGenesisPos2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classInfo_infoMarginTop"
+                                    android:padding="@dimen/classInfo_viewsMargin"
+                                    android:text="마법사"
+                                    android:textColor="@color/contentColor"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/TabGenesisPos3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classInfo_infoMarginTop"
+                                    android:padding="@dimen/classInfo_viewsMargin"
+                                    android:text="궁수"
+                                    android:textColor="@color/contentColor"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/TabGenesisPos4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classInfo_infoMarginTop"
+                                    android:padding="@dimen/classInfo_viewsMargin"
+                                    android:text="도적"
+                                    android:textColor="@color/contentColor"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/TabGenesisPos5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classInfo_infoMarginTop"
+                                    android:padding="@dimen/classInfo_viewsMargin"
+                                    android:text="해적"
+                                    android:textColor="@color/contentColor"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/TabZero"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="100"
+                                >
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_weight="10"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/class_null"/>
+
+                                <TextView
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:layout_weight="10"
+                                    android:textColor="@color/contentColor"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="10"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:textSize="16dp"
+                                    android:textColor="@color/contentColor"/>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="60"
+                                    android:textSize="16dp"
+                                    android:weightSum="9">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="5추"
+                                        android:layout_weight="1"
+                                        android:textSize="16dp"
+                                        android:textColor="@color/contentColor"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=" / "
+                                        android:layout_weight="1"
+                                        android:textSize="16dp"
+                                        android:textColor="@color/contentColor"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="4추"
+                                        android:layout_weight="1"
+                                        android:textSize="16dp"
+                                        android:textColor="@color/contentColor"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=" / "
+                                        android:layout_weight="1"
+                                        android:textSize="16dp"
+                                        android:textColor="@color/contentColor"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="3추"
+                                        android:layout_weight="1"
+                                        android:textSize="16dp"
+                                        android:textColor="@color/contentColor"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=" / "
+                                        android:layout_weight="1"
+                                        android:textSize="16dp"
+                                        android:textColor="@color/contentColor"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="2추"
+                                        android:layout_weight="1"
+                                        android:textSize="16dp"
+                                        android:textColor="@color/contentColor"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=" / "
+                                        android:layout_weight="1"
+                                        android:textColor="@color/contentColor"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="1추"
+                                        android:layout_weight="1"
+                                        android:textSize="16dp"
+                                        android:textColor="@color/contentColor"/>
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/TabZeroPos"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/classInfo_viewsMargin"
+                                    android:text="라피스 / 라즐리"
+                                    android:textColor="@color/contentColor"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </TabHost>
+
+        </ScrollView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/adLout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:paddingTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

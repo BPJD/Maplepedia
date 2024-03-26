@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="25dp"
+                android:textColor="@color/contentColor"
+                android:gravity="center"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="배고픈 무토 레시피" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="#ff7b00"
+                android:textSize="15dp"
+                android:layout_marginBottom="20dp"
+                android:text="아래쪽에 있을수록 난이도가 어렵습니다."/>
+
+
+            <TextView
+                android:textSize="13dp"
+                android:textColor="@color/contentColor"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="앗볶음 : 폭신발바닥 10 , 느끼껍질 5" />
+
+            <TextView
+                android:textSize="13dp"
+                android:textColor="@color/contentColor"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="깔깔만두 : 쫀득발바닥 10 , 새콤껍질 5" />
+
+            <TextView
+                android:textSize="13dp"
+                android:textColor="@color/contentColor"
+                android:gravity="center"
+                android:paddingTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="헉튀김 : 담백갈기 10 , 달달발굽 5" />
+
+            <TextView
+                android:textSize="13dp"
+                android:textColor="@color/contentColor"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="낄낄볶음밥 : 톡톡갈기 10 , 매콤발굽 5" />
+
+
+            <TextView
+                android:textSize="13dp"
+                android:textColor="@color/contentColor"
+                android:gravity="center"
+                android:paddingTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="이런면 : 단단물갈퀴 10 , 달달발굽 5 , 담백갈기 5" />
+
+            <TextView
+                android:textSize="13dp"
+                android:textColor="@color/contentColor"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="휴피자 : 시큼물갈퀴 10 , 매콤발굽 5 , 톡톡갈기 5" />
+
+            <TextView
+                android:textSize="13dp"
+                android:textColor="@color/contentColor"
+                android:gravity="center"
+                android:paddingTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="하빵 : 말랑등껍질 10 , 쫀득발바닥 5 , 새콤껍질 5" />
+
+            <TextView
+                android:textSize="13dp"
+                android:textColor="@color/contentColor"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="저런찜 : 바싹등껍질 10 , 폭신발바닥 5 , 느끼껍질 5" />
+
+
+            <TextView
+                android:textSize="13dp"
+                android:textColor="@color/contentColor"
+                android:gravity="center"
+                android:paddingTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="오잉피클 : 끈적깃털 10 , 시큼물갈퀴 5 , 톡톡갈기 5" />
+            <TextView
+                android:textSize="13dp"
+                android:textColor="@color/contentColor"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="허허말이 : 미끈깃털 10 , 단단물갈퀴 5 , 담백갈기 5" />
+            <TextView
+                android:textSize="13dp"
+                android:textColor="@color/contentColor"
+                android:gravity="center"
+                android:paddingTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="호호탕 : 텁텁발톱 10 , 단단물갈퀴 5 , 바싹등껍질 5" />
+            <TextView
+                android:textSize="13dp"
+                android:textColor="@color/contentColor"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="큭큭죽 : 쫄깃발톱 10 , 시큼물갈퀴 5 , 말랑등껍질 5" />
+
+            <TextView
+                android:textSize="16dp"
+                android:textColor="@color/contentColor"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="흑흑화채" />
+
+            <TextView
+                android:textSize="13dp"
+                android:textColor="@color/contentColor"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="끈적깃털 10 , 쫀득발바닥 5 , 새콤껍질 5 , 츄릅열매 1" />
+
+            <TextView
+                android:textSize="16dp"
+                android:textColor="@color/contentColor"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="크헉구이" />
+
+            <TextView
+                android:textSize="13dp"
+                android:textColor="@color/contentColor"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="미끈깃털 10 , 폭신발바닥 5 , 느끼껍질 5 , 츄릅열매 1" />
+
+            <TextView
+                android:textSize="16dp"
+                android:textColor="@color/contentColor"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="엉엉순대" />
+
+            <TextView
+                android:textSize="13dp"
+                android:textColor="@color/contentColor"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="쫄깃발톱 10 , 말랑등껍질 5 , 톡톡갈기 5 , 츄릅열매 1" />
+
+            <TextView
+                android:textSize="16dp"
+                android:textColor="@color/contentColor"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="으악샐러드" />
+
+            <TextView
+                android:textSize="13dp"
+                android:textColor="@color/contentColor"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="텁텁발톱 10 , 바싹등껍질 5 , 담백갈기 5 , 츄릅열매 1" />
+
+            <TextView
+                android:textColor="@color/contentColor"
+                android:layout_marginTop="20dp"
+                android:background="#ff7b00"
+                android:paddingLeft="2dp"
+                android:textSize="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="배고픈 무토란?"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/contentColor"
+                android:textSize="14dp"
+                android:padding="6dp"
+                android:text="입장 조건 : 레벨 210 이상, 츄츄 아일랜드 퀘스트 완료" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/contentColor"
+                android:textSize="14dp"
+                android:padding="6dp"
+                android:text="제한 시간 : 10분" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/contentColor"
+                android:textSize="14dp"
+                android:padding="6dp"
+                android:text="제한 인원 : 1 ~ 4명" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/contentColor"
+                android:textSize="14dp"
+                android:paddingLeft="6dp"
+                android:text="클리어 가능 횟수 : 3회" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/contentColor"
+                android:textSize="14dp"
+                android:paddingLeft="6dp"
+                android:text="(매일 자정에 초기화, 클리어 할 때만 누적)" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/contentColor"
+                android:textSize="14dp"
+                android:padding="6dp"
+                android:text="보상 아이템 : 아케인 심볼 - 츄츄 아일랜드" />
+
+            <TextView
+                android:textColor="@color/contentColor"
+                android:layout_marginTop="10dp"
+                android:background="#ff7b00"
+                android:paddingLeft="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="파티퀘스트 설명" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/contentColor"
+                android:textSize="14dp"
+                android:padding="6dp"
+                android:text="굴라의 침공이 시작되었다. 무토에게 맛있는 음식을 만들어줘서 무토가 굴라를 물리칠 수 있도록 해야한다." />
+
+            <TextView
+                android:textColor="@color/contentColor"
+                android:layout_marginTop="10dp"
+                android:background="#ff7b00"
+                android:paddingLeft="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="아케인 포스 요구량" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/contentColor"
+                android:text="쉬운 난이도 : 100 이상" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/contentColor"
+                android:text="일반 난이도 : 100 이상" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/contentColor"
+                android:paddingBottom="15dp"
+                android:text="어려운 난이도 : 200 이상" />
+
+            <LinearLayout
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp">
+
+                    <TextView
+                        android:textSize="16dp"
+                        android:textColor="@color/contentColor"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="1dp"
+                        android:text="일반 난이도 보상" />
+
+                    <TextView
+                        android:textColor="@color/contentColor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="S 랭크 : 5분 이내 클리어" />
+
+                    <TextView
+                        android:textColor="@color/contentColor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingBottom="5dp"
+                        android:text="아케인 심볼 : 3개" />
+
+                    <TextView
+                        android:textColor="@color/contentColor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="A 랭크 : 8분 이내 클리어" />
+
+                    <TextView
+                        android:textColor="@color/contentColor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingBottom="5dp"
+                        android:text="아케인 심볼 : 2개" />
+
+                    <TextView
+                        android:textColor="@color/contentColor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="B 랭크 : 10분 이내 클리어" />
+
+                    <TextView
+                        android:textColor="@color/contentColor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingBottom="5dp"
+                        android:text="아케인 심볼 : 1개" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp">
+
+                    <TextView
+                        android:textSize="16dp"
+                        android:textColor="@color/contentColor"
+                        android:gravity="center"
+                        android:paddingLeft="1dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="1dp"
+                        android:text="어려운 난이도 보상" />
+
+                    <TextView
+                        android:textColor="@color/contentColor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="S 랭크 : 5분 이내 클리어" />
+
+                    <TextView
+                        android:textColor="@color/contentColor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingBottom="5dp"
+                        android:text="아케인 심볼 : 5개" />
+
+                    <TextView
+                        android:textColor="@color/contentColor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="A 랭크 : 8분 이내 클리어" />
+
+                    <TextView
+                        android:textColor="@color/contentColor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingBottom="5dp"
+                        android:text="아케인 심볼 : 4개" />
+
+                    <TextView
+                        android:textColor="@color/contentColor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="B 랭크 : 10분 이내 클리어" />
+
+                    <TextView
+                        android:textColor="@color/contentColor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingBottom="5dp"
+                        android:text="아케인 심볼 : 3개" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/contentColor"
+                android:textSize="14dp"
+                android:padding="6dp"
+                android:text="쉬운 난이도는 클리어 시간에 관계없이 아케인 심볼 1개를 획득한다." />
+
+            <TextView
+                android:textColor="@color/contentColor"
+                android:layout_marginTop="10dp"
+                android:background="#ff7b00"
+                android:paddingLeft="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="공략" />
+
+            <TextView
+                android:textSize="13dp"
+                android:textColor="@color/contentColor"
+                android:paddingLeft="1dp"
+                android:paddingTop="1dp"
+                android:paddingBottom="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="시미아에게 필요한 음식의 재료를 가져다주면 된다. 츄츄 아일랜드의 퀘스트를 클리어하면서 보았던 아이템들이 재료라서 어떤 몬스터에게서 어떤 재료가 나오는지 알기 쉬울 것이다. 그리고 요리마다 보너스 시간이 있다. 보너스 시간 안에 재료를 모두 가져다주면 무토가 굴라를 더 많이 밀어내므로 보너스 시간이 지나기 전에 재료를 모두 가져다주자." />
+
+            <TextView
+                android:textSize="13dp"
+                android:textColor="@color/contentColor"
+                android:paddingLeft="1dp"
+                android:paddingTop="1dp"
+                android:paddingBottom="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="퀘스트 도중에 파티를 탈퇴하면 파티퀘스트를 바로 나갈 수 있다. 원하는 등급으로 퀘스트를 완료할 수 없다면 파티를 탈퇴하고 재도전하자." />
+
+            <TextView
+                android:textSize="13dp"
+                android:textColor="@color/contentColor"
+                android:paddingLeft="1dp"
+                android:paddingTop="1dp"
+                android:paddingBottom="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="퀘스트를 진행하다보면 ??? 표시가 되어 있는 재료를 보게 된다. 레시피를 보고 알맞은 재료를 가져다주면 된다." />
+
+            <TextView
+                android:textSize="16dp"
+                android:textColor="@color/contentColor"
+                android:paddingLeft="1dp"
+                android:paddingTop="1dp"
+                android:paddingBottom="5dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="각 지형마다 나오는 몬스터들이다." />
+
+            <TextView
+                android:textSize="14dp"
+                android:textColor="@color/contentColor"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="왼쪽 : 캣피쉬(물갈퀴) , 플리온(갈기) , 파인디어(발굽)" />
+
+            <TextView
+                android:textSize="14dp"
+                android:textColor="@color/contentColor"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="위쪽 : 크릴라(깃털) , 버샤크(발톱)" />
+
+            <TextView
+                android:textSize="14dp"
+                android:textColor="@color/contentColor"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="오른쪽 : 라이터틀(등껍질) , 울프룻(발바닥) , 유나나(껍질)" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

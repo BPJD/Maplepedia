@@ -1,0 +1,49 @@
+﻿TAG,className,classFaction,classType,mainWeapon,subWeapon,mainStat,subStat,criRate,unionInfo,unionB,unionA,unionS,unionSS,unionSSS,linkIcon,linkName,linkInfo,linkDesc,identityIcon,identityDesc,identityIcon2,identityDesc2,identityIcon3,identityDesc3
+1,히어로,모험가,전사,검&도끼,메달&방패,STR,DEX,55%(발할라 적용),STR 증가,10,20,40,80,100,11001028,linkTest1,linkInfo1,linkDesc1,11001028,identityTest,11001028,identityTest,0,0
+2,다크나이트,모험가,전사,창&폴암,쇠사슬,STR,DEX,55%,최대 HP 증가,2%,3%,4%,5%,6%,11001028,linkTest2,linkInfo2,linkDesc2,11001028,identityTest,11001028,identityTest,0,0
+3,팔라딘,모험가,전사,검&둔기,로자리오&방패,STR,DEX,47%,STR 증가,10,20,40,80,100,11001028,linkTest3,linkInfo3,linkDesc3,11001028,identityTest,11001028,identityTest,11001028,identityTest
+4,"아크메이지(불, 독)",모험가,마법사,완드&스태프,마도서(적녹)&방패,INT,LUK,35%(완드 40%),최대 MP 증가,2%,3%,4%,5%,6%,11001028,linkTest4,linkInfo4,linkDesc4,11001028,identityTest,11001028,identityTest,11001028,identityTest
+5,"아크메이지(썬, 콜)",모험가,마법사,완드&스태프,마도서(청은)&방패,INT,LUK,35%(완드 40%),INT 증가,10,20,40,80,100,11001028,linkTest5,linkInfo5,linkDesc5,11001028,identityTest,11001028,identityTest,11001028,identityTest
+6,비숍,모험가,마법사,완드&스태프,마도서(백금)&방패,INT,LUK,75%(완드 80%),INT 증가,10,20,40,80,100,11001028,linkTest6,linkInfo6,linkDesc6,11001028,identityTest,0,0,0,0
+7,보우마스터,모험가,궁수,활,화살깃,DEX,STR,"69%(자기 링크 2레벨, 샤프 아이즈 적용)",DEX 증가,10,20,40,80,100,11001028,linkTest7,linkInfo7,linkDesc7,0,0,0,0,0,0
+8,신궁,모험가,궁수,석궁,활골무,DEX,STR,"69%(자기 링크 2레벨, 샤프 아이즈 적용)",크리티컬 확률 증가,1%,2%,3%,4%,5%,11001028,linkTest8,linkInfo8,linkDesc8,0,0,0,0,0,0
+9,패스파인더,모험가,궁수,에인션트 보우,렐릭,DEX,STR,"79%(자기 링크 2레벨, 샤프 아이즈 적용)",DEX 증가,10,20,40,80,100,11001028,linkTest9,linkInfo9,linkDesc9,0,0,0,0,0,0
+10,나이트로드,모험가,도적,아대,부적,LUK,DEX,75%,크리티컬 확률 증가,1%,2%,3%,4%,5%,11001028,linkTest10,linkInfo10,linkDesc10,0,0,0,0,0,0
+11,섀도어,모험가,도적,단검,단검집&방패,LUK,STR&DEX,55%,LUK 증가,10,20,40,80,100,11001028,linkTest11,linkInfo11,linkDesc11,0,0,0,0,0,0
+12,듀얼블레이드,모험가,도적,단검,블레이드,LUK,STR&DEX,40%,LUK 증가,10,20,40,80,100,11001028,linkTest12,linkInfo12,linkDesc12,0,0,0,0,0,0
+13,바이퍼,모험가,해적,너클,리스트밴드,STR,DEX,40%,STR 증가,10,20,40,80,100,11001028,linkTest13,linkInfo13,linkDesc13,0,0,0,0,0,0
+14,캡틴,모험가,해적,총,조준기,DEX,STR,75%,소환수 지속시간 증가,4%,6%,8%,10%,12%,11001028,linkTest14,linkInfo14,linkDesc14,0,0,0,0,0,0
+15,캐논슈터,모험가,해적,핸드캐논,화약통,STR,DEX,45%,STR 증가,10,20,40,80,100,11001028,linkTest15,linkInfo15,linkDesc15,0,0,0,0,0,0
+16,소울마스터,기사단,전사,검,보석&방패,STR,DEX,50%,최대 HP 증가,250,500,1000,2000,2500,11001028,linkTest16,linkInfo16,linkDesc16,0,0,0,0,0,0
+17,미하일,기사단,전사,한손검,소울 실드,STR,DEX,40%,최대 HP 증가,250,500,1000,2000,2500,11001028,linkTest17,linkInfo17,linkDesc17,0,0,0,0,0,0
+18,플레임위자드,기사단,마법사,완드&스태프,보석&방패,INT,LUK,35%(완드 40%),INT 증가,10,20,40,80,100,11001028,linkTest18,linkInfo18,linkDesc18,0,0,0,0,0,0
+19,윈드브레이커,기사단,궁수,활,보석,DEX,STR,60%,DEX 증가,10,20,40,80,100,11001028,linkTest19,linkInfo19,linkDesc19,0,0,0,0,0,0
+20,나이트워커,기사단,도적,아대,보석,LUK,DEX,40%,LUK 증가,10,20,40,80,100,11001028,linkTest20,linkInfo20,linkDesc20,0,0,0,0,0,0
+21,스트라이커,기사단,해적,너클,보석,STR,DEX,35%,STR 증가,10,20,40,80,100,11001028,linkTest21,linkInfo21,linkDesc21,0,0,0,0,0,0
+22,아란,영웅,전사,폴암,무게추,STR,DEX,55%(콤보 10 중첩),타격 시 70% 확률로 HP 회복,2%,4%,6%,8%,10%,11001028,linkTest22,linkInfo22,linkDesc22,0,0,0,0,0,0
+23,에반,영웅,마법사,완드&스태프,문서,INT,LUK,50%(완드 55%),타격 시 70% 확률로 MP 회복,2%,4%,6%,8%,10%,11001028,linkTest23,linkInfo23,linkDesc23,0,0,0,0,0,0
+24,루미너스,영웅,마법사,샤이닝로드,오브,INT,LUK,40%,INT 증가,10,20,40,80,100,11001028,linkTest24,linkInfo24,linkDesc24,0,0,0,0,0,0
+25,메르세데스,영웅,궁수,듀얼보우건,마법 화살,DEX,STR,60%,스킬 재사용 대기시간 감소,2%,3%,4%,5%,6%,11001028,linkTest25,linkInfo25,linkDesc25,0,0,0,0,0,0
+26,팬텀,영웅,도적,케인,카드,LUK,DEX,75%(포츈 카드 적용),메소 획득량 증가,1%,2%,3%,4%,5%,11001028,linkTest26,linkInfo26,linkDesc26,0,0,0,0,0,0
+27,은월,영웅,해적,너클,여우 구슬,STR,DEX,30%,크리티컬 데미지 증가,1%,2%,3%,4%,5%,11001028,linkTest27,linkInfo27,linkDesc27,0,0,0,0,0,0
+28,데몬슬레이어,레지스탕스,전사,한손 둔기,포스실드,STR,DEX,25%(데몬 어웨이크닝 미적용),상태이상 내성 증가,1,2,3,4,5,11001028,linkTest28,linkInfo28,linkDesc28,0,0,0,0,0,0
+29,데몬어벤져,레지스탕스,전사,데스페라도,포스실드,HP,STR,25%,보스 공격 시 데미지 증가,1%,2%,3%,4%,5%,11001028,linkTest29,linkInfo29,linkDesc29,0,0,0,0,0,0
+30,블래스터,레지스탕스,전사,건틀렛 리볼버,장약,STR,DEX,65%(콤비네이션 트레이닝 II 10 중첩),방어율 무시 증가,1%,2%,3%,4%,5%,11001028,linkTest30,linkInfo30,linkDesc30,0,0,0,0,0,0
+31,배틀메이지,레지스탕스,마법사,스태프,마법구슬,INT,LUK,60%(배틀 레이지 적용),INT 증가,10,20,40,80,100,11001028,linkTest31,linkInfo31,linkDesc31,0,0,0,0,0,0
+32,와일드헌터,레지스탕스,궁수,석궁,화살촉,DEX,STR,"73%(제이라 적용, 재규어 링크 최대)",공격 시 20% 확률로 데미지 증가,4%,8%,12%,16%,20%,11001028,linkTest32,linkInfo32,linkDesc32,0,0,0,0,0,0
+33,제논,레지스탕스,도적&해적,에너지소드,컨트롤러,STR&DEX&LUK,없음,45%,STR/DEX/LUK 증가,5,10,20,40,50,11001028,linkTest33,linkInfo33,linkDesc33,0,0,0,0,0,0
+34,메카닉,레지스탕스,해적,총,매그넘,DEX,STR,65%(탱크 모드),버프 지속시간 증가,5%,10%,15%,20%,25%,11001028,linkTest34,linkInfo34,linkDesc34,0,0,0,0,0,0
+35,카이저,노바,전사,두손검,용의 정수,STR,DEX,65%(리셔플:공격 모드),STR 증가,10,20,40,80,100,11001028,linkTest35,linkInfo35,linkDesc35,0,0,0,0,0,0
+36,카인,노바,궁수,드래곤 슈터,웨폰 벨트,DEX,STR,60%,DEX 증가,10,20,40,80,100,11001028,linkTest36,linkInfo36,linkDesc36,0,0,0,0,0,0
+37,카데나,노바,도적,체인,무기 전송장치,LUK,STR&DEX,55%(상인단 특제 비약 미적용),LUK 증가,10,20,40,80,100,11001028,linkTest37,linkInfo37,linkDesc37,0,0,0,0,0,0
+38,엔젤릭버스터,노바,해적,소율 슈터,소울링,DEX,STR,"35%(파이널 컨트랙트, 스포트라이트 미적용)",DEX 증가,10,20,40,80,100,11001028,linkTest38,linkInfo38,linkDesc38,0,0,0,0,0,0
+39,아델,레프,전사,튜너,브레이슬릿,STR,DEX,45%,STR 증가,10,20,40,80,100,11001028,linkTest39,linkInfo39,linkDesc39,0,0,0,0,0,0
+40,일리움,레프,마법사,매직 건틀렛,매직윙,INT,LUK,45%,INT 증가,10,20,40,80,100,11001028,linkTest40,linkInfo40,linkDesc40,0,0,0,0,0,0
+41,칼리,레프,도적,차크람,헥스시커,LUK,DEX,40%,LUK 증가,10,20,40,80,100,11001028,linkTest41,linkInfo41,linkDesc41,0,0,0,0,0,0
+42,아크,레프,해적,너클,패스 오브 어비스,STR,DEX,55%(스칼렛 차지드라이브 적용),STR 증가,10,20,40,80,100,11001028,linkTest42,linkInfo42,linkDesc42,0,0,0,0,0,0
+43,라라,아니마,마법사,완드,노리개,INT,LUK,45%,INT 증가,10,20,40,80,100,11001028,linkTest43,linkInfo43,linkDesc43,0,0,0,0,0,0
+44,호영,아니마,도적,부채,선추,LUK,DEX,55%,LUK 증가,10,20,40,80,100,11001028,linkTest44,linkInfo44,linkDesc44,0,0,0,0,0,0
+45,제로,신의 아이,전사,태도&대검,없음,STR,DEX,55%(리졸브 타임 최대),경험치 획득량 증가,4%,6%,8%,10%,12%,11001028,linkTest45,linkInfo45,linkDesc45,0,0,0,0,0,0
+46,키네시스,초능력자,마법사,ESP 리미터,체스피스,INT,LUK,45%,INT 증가,10,20,40,80,100,11001028,linkTest46,linkInfo46,linkDesc46,0,0,0,0,0,0
+47,핑크빈,이벤트,전사,전사 무기,없음,STR,DEX,"30%(기본 수치, 10레벨 당 1% 증가)",없음,-,-,-,-,-,11001028,linkTest47,linkInfo47,linkDesc47,0,0,0,0,0,0
+48,예티,이벤트,해적,해적 무기,없음,STR,DEX,40%(10레벨 당 1% 증가),없음,-,-,-,-,-,11001028,linkTest48,linkInfo48,linkDesc48,0,0,0,0,0,0

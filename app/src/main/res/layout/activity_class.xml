@@ -1,0 +1,2329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/background_up"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_color_up"
+        android:scaleType="centerCrop"
+        android:tint="#FFDD00"
+        tools:ignore="UseAppTint"/>
+    <ImageView
+        android:id="@+id/background_down"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_color_down"
+        android:scaleType="centerCrop"
+        android:tint="#FF7700"
+        tools:ignore="UseAppTint" />
+
+
+    <LinearLayout
+        android:id="@+id/activity_name"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/adLout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="6dp"
+            android:text="직업 정보"
+            android:textColor="@color/contentColor"
+            android:textSize="@dimen/menuName_TextSize"
+            android:textStyle="bold" />
+
+        <TabHost
+            android:id="@android:id/tabhost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:context=".MainActivity">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TabWidget>
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/class_Tab1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ScrollView
+                            android:id="@+id/activity_scrollFaction"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="30dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:gravity="center"
+                                    android:text="모험가"
+                                    android:textColor="@color/contentColor"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="333"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+                                        android:drawableLeft="@drawable/class_warrior"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="1"
+                                        android:text="히어로"
+                                        android:textColor="@color/contentColor" />
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="333"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+                                        android:drawableLeft="@drawable/class_warrior"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="3"
+                                        android:text="팔라딘"
+                                        android:textColor="@color/contentColor" />
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="333"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_warrior"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="2"
+                                        android:text="다크나이트"
+                                        android:textColor="@color/contentColor" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="333"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_mage"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="4"
+                                        android:text="불독"
+                                        android:textColor="@color/contentColor" />
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="333"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_mage"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="5"
+                                        android:text="썬콜"
+                                        android:textColor="@color/contentColor" />
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="333"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_mage"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="6"
+                                        android:text="비숍"
+                                        android:textColor="@color/contentColor" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="333"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_archer"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="7"
+                                        android:text="보우마스터"
+                                        android:textColor="@color/contentColor" />
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="333"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_archer"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="8"
+                                        android:text="신궁"
+                                        android:textColor="@color/contentColor" />
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="333"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_archer"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="9"
+                                        android:text="패스파인더"
+                                        android:textColor="@color/contentColor" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="333"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_thief"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="10"
+                                        android:text="나이트로드"
+                                        android:textColor="@color/contentColor" />
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="333"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_thief"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="11"
+                                        android:text="섀도어"
+                                        android:textColor="@color/contentColor" />
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="333"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_thief"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="12"
+                                        android:text="듀블"
+                                        android:textColor="@color/contentColor" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="333"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_pirate"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="13"
+                                        android:text="바이퍼"
+                                        android:textColor="@color/contentColor" />
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="333"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_pirate"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="14"
+                                        android:text="캡틴"
+                                        android:textColor="@color/contentColor" />
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="333"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_pirate"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="15"
+                                        android:text="캐논슈터"
+                                        android:textColor="@color/contentColor" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:gravity="center"
+                                    android:text="시그너스 기사단"
+                                    android:textColor="@color/contentColor"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_warrior"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="16"
+                                        android:text="소울마스터"
+                                        android:textColor="@color/contentColor" />
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_warrior"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="17"
+                                        android:text="미하일"
+                                        android:textColor="@color/contentColor" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_mage"
+                                        android:drawableRight="@drawable/class_null"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="18"
+                                        android:text="플레임위자드"
+                                        android:textColor="@color/contentColor" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_archer"
+                                        android:drawableRight="@drawable/class_null"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="19"
+                                        android:text="윈드브레이커"
+                                        android:textColor="@color/contentColor" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_thief"
+                                        android:drawableRight="@drawable/class_null"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="20"
+                                        android:text="나이트워커"
+                                        android:textColor="@color/contentColor" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:layout_marginBottom="18dp"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_pirate"
+                                        android:drawableRight="@drawable/class_null"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="21"
+                                        android:text="스트라이커"
+                                        android:textColor="@color/contentColor" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/layout_native"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="8dp"
+                                    android:background="@drawable/app_design_background"
+                                    android:backgroundTint="@color/backgroundColor"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+                                    <include
+                                        layout="@layout/layout_native_item"/>
+                                </LinearLayout>
+
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:gravity="center"
+                                    android:text="영웅"
+                                    android:textColor="@color/contentColor"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_warrior"
+                                        android:drawableRight="@drawable/class_null"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="22"
+                                        android:text="아란"
+                                        android:textColor="@color/contentColor" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_mage"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="23"
+                                        android:text="에반"
+                                        android:textColor="@color/contentColor" />
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_mage"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="24"
+                                        android:text="루미너스"
+                                        android:textColor="@color/contentColor" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_archer"
+                                        android:drawableRight="@drawable/class_null"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="25"
+                                        android:text="메르세데스"
+                                        android:textColor="@color/contentColor" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_thief"
+                                        android:drawableRight="@drawable/class_null"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="26"
+                                        android:text="팬텀"
+                                        android:textColor="@color/contentColor" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_pirate"
+                                        android:drawableRight="@drawable/class_null"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="27"
+                                        android:text="은월"
+                                        android:textColor="@color/contentColor" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:gravity="center"
+                                    android:text="레지스탕스"
+                                    android:textColor="@color/contentColor"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="333"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_warrior"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="28"
+                                        android:text="데슬"
+                                        android:textColor="@color/contentColor" />
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="333"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_warrior"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="29"
+                                        android:text="데몬어벤져"
+                                        android:textColor="@color/contentColor" />
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="333"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_warrior"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="30"
+                                        android:text="블래스터"
+                                        android:textColor="@color/contentColor" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_mage"
+                                        android:drawableRight="@drawable/class_null"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="31"
+                                        android:text="배틀메이지"
+                                        android:textColor="@color/contentColor" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_archer"
+                                        android:drawableRight="@drawable/class_null"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="32"
+                                        android:text="와일드헌터"
+                                        android:textColor="@color/contentColor" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_thief"
+                                        android:drawableRight="@drawable/class_pirate"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="33"
+                                        android:text="제논"
+                                        android:textColor="@color/contentColor" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_pirate"
+                                        android:drawableRight="@drawable/class_null"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="34"
+                                        android:text="메카닉"
+                                        android:textColor="@color/contentColor" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:gravity="center"
+                                    android:text="노바"
+                                    android:textColor="@color/contentColor"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_warrior"
+                                        android:drawableRight="@drawable/class_null"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="35"
+                                        android:text="카이저"
+                                        android:textColor="@color/contentColor" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_archer"
+                                        android:drawableRight="@drawable/class_null"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="36"
+                                        android:text="카인"
+                                        android:textColor="@color/contentColor" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_thief"
+                                        android:drawableRight="@drawable/class_null"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="37"
+                                        android:text="카데나"
+                                        android:textColor="@color/contentColor" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_pirate"
+                                        android:drawableRight="@drawable/class_null"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="38"
+                                        android:text="엔젤릭버스터"
+                                        android:textColor="@color/contentColor" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:gravity="center"
+                                    android:text="레프"
+                                    android:textColor="@color/contentColor"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_warrior"
+                                        android:drawableRight="@drawable/class_null"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="39"
+                                        android:text="아델"
+                                        android:textColor="@color/contentColor" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_mage"
+                                        android:drawableRight="@drawable/class_null"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="40"
+                                        android:text="일리움"
+                                        android:textColor="@color/contentColor" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_thief"
+                                        android:drawableRight="@drawable/class_null"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="41"
+                                        android:text="칼리"
+                                        android:textColor="@color/contentColor" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_pirate"
+                                        android:drawableRight="@drawable/class_null"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="42"
+                                        android:text="아크"
+                                        android:textColor="@color/contentColor" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:gravity="center"
+                                    android:text="아니마"
+                                    android:textColor="@color/contentColor"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_mage"
+                                        android:drawableRight="@drawable/class_null"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="43"
+                                        android:text="라라"
+                                        android:textColor="@color/contentColor" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_thief"
+                                        android:drawableRight="@drawable/class_null"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="44"
+                                        android:text="호영"
+                                        android:textColor="@color/contentColor" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:gravity="center"
+                                    android:text="신의 아이"
+                                    android:textColor="@color/contentColor"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_warrior"
+                                        android:drawableRight="@drawable/class_null"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="45"
+                                        android:text="제로"
+                                        android:textColor="@color/contentColor" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:gravity="center"
+                                    android:text="초능력자"
+                                    android:textColor="@color/contentColor"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_mage"
+                                        android:drawableRight="@drawable/class_null"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="46"
+                                        android:text="키네시스"
+                                        android:textColor="@color/contentColor" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </ScrollView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/class_Tab2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ScrollView
+                            android:id="@+id/activity_scrollType"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="30dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:gravity="center"
+                                    android:text="전사"
+                                    android:textColor="@color/contentColor"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="333"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_warrior"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="1"
+                                        android:text="히어로"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/contentColor" />
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="333"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_warrior"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="2"
+                                        android:text="다크나이트"
+                                        android:textColor="@color/contentColor" />
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="333"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_warrior"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="3"
+                                        android:text="팔라딘"
+                                        android:textColor="@color/contentColor" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="333"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_warrior"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="16"
+                                        android:text="소울마스터"
+                                        android:textColor="@color/contentColor" />
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="333"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_warrior"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="17"
+                                        android:text="미하일"
+                                        android:textColor="@color/contentColor" />
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="333"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_warrior"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="22"
+                                        android:text="아란"
+                                        android:textColor="@color/contentColor" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="333"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_warrior"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="28"
+                                        android:text="데슬"
+                                        android:textColor="@color/contentColor" />
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="333"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_warrior"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="29"
+                                        android:text="데몬어벤져"
+                                        android:textColor="@color/contentColor" />
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="333"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_warrior"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="30"
+                                        android:text="블래스터"
+                                        android:textColor="@color/contentColor" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="333"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_warrior"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="35"
+                                        android:text="카이저"
+                                        android:textColor="@color/contentColor" />
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="333"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_warrior"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="39"
+                                        android:text="아델"
+                                        android:textColor="@color/contentColor" />
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="333"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_warrior"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="45"
+                                        android:text="제로"
+                                        android:textColor="@color/contentColor" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:gravity="center"
+                                    android:text="마법사"
+                                    android:textColor="@color/contentColor"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_mage"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="4"
+                                        android:text="불독"
+                                        android:textColor="@color/contentColor" />
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_mage"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="5"
+                                        android:text="썬콜"
+                                        android:textColor="@color/contentColor" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_mage"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="6"
+                                        android:text="비숍"
+                                        android:textColor="@color/contentColor" />
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_mage"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="18"
+                                        android:text="플레임위자드"
+                                        android:textColor="@color/contentColor" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_mage"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="23"
+                                        android:text="에반"
+                                        android:textColor="@color/contentColor" />
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_mage"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="24"
+                                        android:text="루미너스"
+                                        android:textColor="@color/contentColor" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_mage"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="31"
+                                        android:text="배틀메이지"
+                                        android:textColor="@color/contentColor" />
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_mage"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="40"
+                                        android:text="일리움"
+                                        android:textColor="@color/contentColor" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_mage"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="43"
+                                        android:text="라라"
+                                        android:textColor="@color/contentColor" />
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_mage"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="46"
+                                        android:text="키네시스"
+                                        android:textColor="@color/contentColor" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:gravity="center"
+                                    android:text="궁수"
+                                    android:textColor="@color/contentColor"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="333"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_archer"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="7"
+                                        android:text="보우마스터"
+                                        android:textColor="@color/contentColor" />
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="333"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_archer"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="8"
+                                        android:text="신궁"
+                                        android:textColor="@color/contentColor" />
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="333"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_archer"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="9"
+                                        android:text="패스파인더"
+                                        android:textColor="@color/contentColor" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_archer"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="19"
+                                        android:text="윈드브레이커"
+                                        android:textColor="@color/contentColor" />
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_archer"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="25"
+                                        android:text="메르세데스"
+                                        android:textColor="@color/contentColor" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_archer"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="32"
+                                        android:text="와일드헌터"
+                                        android:textColor="@color/contentColor" />
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_archer"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="36"
+                                        android:text="카인"
+                                        android:textColor="@color/contentColor" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:gravity="center"
+                                    android:text="도적"
+                                    android:textColor="@color/contentColor"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="333"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_thief"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="10"
+                                        android:text="나이트로드"
+                                        android:textColor="@color/contentColor" />
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="333"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_thief"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="11"
+                                        android:text="섀도어"
+                                        android:textColor="@color/contentColor" />
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="333"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_thief"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="12"
+                                        android:text="듀블"
+                                        android:textColor="@color/contentColor" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="333"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_thief"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="20"
+                                        android:text="나이트워커"
+                                        android:textColor="@color/contentColor" />
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="333"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_thief"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="26"
+                                        android:text="팬텀"
+                                        android:textColor="@color/contentColor" />
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="333"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_thief"
+                                        android:drawableRight="@drawable/class_pirate"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="33"
+                                        android:text="제논"
+                                        android:textColor="@color/contentColor" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="333"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_thief"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="37"
+                                        android:text="카데나"
+                                        android:textColor="@color/contentColor" />
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="333"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_thief"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="41"
+                                        android:text="칼리"
+                                        android:textColor="@color/contentColor" />
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="333"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_thief"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="44"
+                                        android:text="호영"
+                                        android:textColor="@color/contentColor" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:gravity="center"
+                                    android:text="해적"
+                                    android:textColor="@color/contentColor"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_pirate"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="13"
+                                        android:text="바이퍼"
+                                        android:textColor="@color/contentColor" />
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_pirate"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="14"
+                                        android:text="캡틴"
+                                        android:textColor="@color/contentColor" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_pirate"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="15"
+                                        android:text="캐논슈터"
+                                        android:textColor="@color/contentColor" />
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_pirate"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="21"
+                                        android:text="스트라이커"
+                                        android:textColor="@color/contentColor" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_pirate"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="27"
+                                        android:text="은월"
+                                        android:textColor="@color/contentColor" />
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_pirate"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="34"
+                                        android:text="메카닉"
+                                        android:textColor="@color/contentColor" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/classButtons_marginTop"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1000">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_pirate"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="38"
+                                        android:text="엔젤릭버스터"
+                                        android:textColor="@color/contentColor" />
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/classButton_height"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="500"
+                                        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                                        android:autoSizeMinTextSize="10dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@drawable/button_design"
+
+                                        android:drawableLeft="@drawable/class_pirate"
+                                        android:drawableTint="@color/classIcon"
+                                        android:onClick="classButtonClicked"
+                                        android:tag="42"
+                                        android:text="아크"
+                                        android:textColor="@color/contentColor" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </ScrollView>
+
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </TabHost>
+
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/adLout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:paddingTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.gms.ads.admanager.AdManagerAdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adManagerAdView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/googleAD">
+        </com.google.android.gms.ads.admanager.AdManagerAdView>
+
+        <com.adknowva.adlib.BannerAdView
+            android:id="@+id/banner_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            />
+
+        <com.gomfactory.adpie.sdk.AdView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/adpie_Tbanner"
+            android:layout_centerHorizontal="true"
+            slotID="653874a28c8d1d33fcd63fd6" >
+        </com.gomfactory.adpie.sdk.AdView>
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:text="- 참고 자료 -"
+                android:textColor="@color/contentColor"
+                android:textSize="18dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/button_design"
+                android:onClick="weaponopt"
+                android:padding="8dp"
+                android:text="주요 무기 공격력 추가옵션"
+                android:textColor="@color/contentColor"
+                android:textSize="15dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/button_design"
+                android:onClick="muto"
+                android:padding="8dp"
+                android:text="배고픈 무토 레시피"
+                android:textColor="@color/contentColor"
+                android:textSize="15dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/button_design"
+                android:onClick="vskill"
+                android:padding="8dp"
+                android:text="5차 공용스킬 정보"
+                android:textColor="@color/contentColor"
+                android:textSize="15dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/button_design"
+                android:onClick="soulskill"
+                android:padding="8dp"
+                android:text="소울스킬 정보"
+                android:textColor="@color/contentColor"
+                android:textSize="15dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/button_design"
+                android:onClick="guildskill"
+                android:padding="8dp"
+                android:text="길드 스킬 / 보스 기여도"
+                android:textColor="@color/contentColor"
+                android:textSize="15dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/button_design"
+                android:onClick="seedring"
+                android:padding="8dp"
+                android:text="시드 반지 레벨 별 효과"
+                android:textColor="@color/contentColor"
+                android:textSize="15dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/button_design"
+                android:onClick="link"
+                android:padding="8dp"
+                android:text="링크스킬 정보 모아보기"
+                android:textColor="@color/contentColor"
+                android:textSize="15dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/button_design"
+                android:onClick="ability"
+                android:padding="8dp"
+                android:text="어빌리티 등급 별 옵션"
+                android:textColor="@color/contentColor"
+                android:textSize="15dp" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

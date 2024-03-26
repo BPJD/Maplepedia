@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|left"
+        android:src="@drawable/item_01002357"
+        android:id="@+id/rewardIcon"
+        android:padding="@dimen/bossItem_marginTop"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|left"
+        android:text="보상 아이템 이름"
+        android:id="@+id/rewardName"
+        android:padding="@dimen/bossItem_marginTop"
+        android:textSize="16dp"
+        android:textColor="@color/contentColor"
+        />
+
+</LinearLayout>

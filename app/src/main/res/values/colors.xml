@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="contentColor">#000000</color>
+    <color name="backgroundColor">#CDFBFBFB</color>
+    <color name="bg_button">#D9FFFFFF</color>
+    <color name="bg_button2">#A8A8A8</color>
+    <color name="bg_button_active">#FFA200</color>
+    <color name="classIcon">#303030</color>
+    <color name="classInfoLine">#80BFBFBF</color>
+    <color name="lineColor">#19404040</color>
+    <color name="dialog_bg">#DADADA</color>
+    <color name="red">#FF0000</color>
+    <color name="orange">#FF7D4A</color>
+    <color name="yellow">#F6FF00</color>
+    <color name="green">#8000FF04</color>
+    <color name="blue">#8000AFFF</color>
+    <color name="nam">#001450</color>
+    <color name="purple">#A400DF</color>
+</resources>

@@ -1,0 +1,8 @@
+bossName,bossDifficulty,bossReqQuest,bossReqLevel,bossLevel,bossHP,bossHPStr,bossHPperPhase,isHpRevision,bossDef,bossForce,rewardItem1,rewardItem1Name,rewardItem2,rewardItem2Name,rewardItem3,rewardItem3Name,rewardItem4,rewardItem4Name,bossPattern1,bossPattern2,bossPattern3,bossPattern4,bossTip
+발록,이지,없음,65,65," 4,280,000 ",428만,0,0,10,아케인/어센틱 없음,01072376,발록의 가죽 신발,,,,,,,발록이 불을 뿜어 모든 땅에 화염 피해를 입힙니다.,,,,"입장 후, 3분 동안 발록의 체력을 깎을 수 없습니다. 발록의 공격을 버티며 공격이 가능한 순간을 기다리세요."
+,,,,,,,,,,,01522052,발록의 무기,,,,,,,발록이 포효하며 천장의 돌을 떨어뜨립니다.,,,,
+,,,,,,,,,,,04001261,발록의 가죽조각,,,,,,,발록이 벼락을 내리칩니다.,,,,
+,,,,,,,,,,,01402062,베인 무기,,,,,,,주니어 발록을 소환합니다.,,,,
+,,,,,,,,,,,,,,,,,,,발록의 머리가 공격 반사를 사용해 공격을 팅겨냅니다.,,,,
+,,,,,,,,,,,,,,,,,,,발록이 혼란 상태이상을 겁니다.,,,,
+,,,,,,,,,,,,,,,,,,,발록이 언데드 상태이상을 겁니다.,,,,

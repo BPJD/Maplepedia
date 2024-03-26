@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/background_down"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_color_down"
+        android:scaleType="centerCrop"
+        android:tint="#80FF00"
+        tools:ignore="UseAppTint" />
+
+    <LinearLayout
+        android:id="@+id/activity_name"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/adLout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/class_info_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="어빌리티 효과"
+            android:textColor="@color/contentColor"
+            android:textSize="@dimen/menuName_TextSize"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/activity_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <TabHost
+                android:id="@android:id/tabhost"
+                android:background="@drawable/app_design_background"
+                android:backgroundTint="@color/backgroundColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:tabStripEnabled="false" />
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:id="@+id/Tab1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="55dp">
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/contentColor"
+                            android:background="#4D11FF00"
+                            android:padding="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:textStyle="bold"
+                            android:textSize="17dp"
+                            android:text="레전드리 등급" />
+                        <TextView
+                            android:textSize="15dp"
+                            android:paddingTop="8dp"
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="보스 몬스터 공격 시 데미지 15 ~ 20 % 증가" />
+                        <TextView
+                            android:textSize="15dp"
+                            android:paddingTop="8dp"
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="상태이상에 걸린 대상 공격 시 데미지 9 ~ 10 % 증가" />
+                        <TextView
+                            android:textSize="15dp"
+                            android:paddingTop="8dp"
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="크리티컬 확률 25 ~ 30 % 증가" />
+                        <TextView
+                            android:textSize="15dp"
+                            android:paddingTop="8dp"
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="스킬 사용 시 15 ~ 20 % 확률로 재사용 대기시간 초기화" />
+                        <TextView
+                            android:textSize="15dp"
+                            android:paddingTop="8dp"
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="버프 스킬의 지속시간 44 ~ 50 % 증가" />
+                        <TextView
+                            android:textSize="15dp"
+                            android:paddingTop="8dp"
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="다수 공격 스킬의 공격 대상 1 증가" />
+                        <TextView
+                            android:textSize="15dp"
+                            android:paddingTop="8dp"
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="패시브 스킬의 레벨 1 증가" />
+                        <TextView
+                            android:textSize="15dp"
+                            android:paddingTop="8dp"
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="메소 획득량 18 ~ 20 % 증가" />
+                        <TextView
+                            android:textSize="15dp"
+                            android:paddingTop="8dp"
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="아이템 획득 확률 18 ~ 20 % 증가" />
+                        <TextView
+                            android:textSize="15dp"
+                            android:paddingTop="8dp"
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="공격 속도 1 단계 증가" />
+                        <TextView
+                            android:textSize="15dp"
+                            android:paddingTop="8dp"
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="공격력 27 ~ 30 증가" />
+                        <TextView
+                            android:textSize="15dp"
+                            android:paddingTop="8dp"
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="마력 27 ~ 30 증가" />
+                        <TextView
+                            android:paddingTop="8dp"
+                            android:textSize="14dp"
+                            android:textColor="@color/contentColor"
+                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="※ 사용되지 않는, 잡옵에 가까운 옵션은 정보에서 제외했습니다." />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:id="@+id/Tab2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="55dp">
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/contentColor"
+                            android:background="#4DFFDB25"
+                            android:padding="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:textStyle="bold"
+                            android:textSize="17dp"
+                            android:text="유니크 등급" />
+                        <TextView
+                            android:textSize="15dp"
+                            android:paddingTop="8dp"
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="보스 몬스터 공격 시 데미지 5 ~ 10 % 증가" />
+                        <TextView
+                            android:textSize="15dp"
+                            android:paddingTop="8dp"
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="상태이상에 걸린 대상 공격 시 데미지 7 ~ 8 % 증가" />
+                        <TextView
+                            android:textSize="15dp"
+                            android:paddingTop="8dp"
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="크리티컬 확률 15 ~ 20 % 증가" />
+                        <TextView
+                            android:textSize="15dp"
+                            android:paddingTop="8dp"
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="스킬 사용 시 5 ~ 10 % 확률로 재사용 대기시간 초기화" />
+                        <TextView
+                            android:textSize="15dp"
+                            android:paddingTop="8dp"
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="버프 스킬의 지속시간 32 ~ 38 % 증가" />
+                        <TextView
+                            android:textSize="15dp"
+                            android:paddingTop="8dp"
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="메소 획득량 13 ~ 15 % 증가" />
+                        <TextView
+                            android:textSize="15dp"
+                            android:paddingTop="8dp"
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="아이템 획득 확률 13 ~ 15 % 증가" />
+                        <TextView
+                            android:textSize="15dp"
+                            android:paddingTop="8dp"
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="공격력 15 ~ 21 증가" />
+                        <TextView
+                            android:textSize="15dp"
+                            android:paddingTop="8dp"
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="마력 15 ~ 21 증가" />
+                        <TextView
+                            android:textSize="15dp"
+                            android:paddingTop="8dp"
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="능력치 25 ~ 30 증가" />
+                        <TextView
+                            android:textSize="15dp"
+                            android:paddingTop="8dp"
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="최대 HP 5 ~ 10 % 증가" />
+                        <TextView
+                            android:paddingTop="8dp"
+                            android:textSize="14dp"
+                            android:textColor="@color/contentColor"
+                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="※ 레전드리 등급에서 2~3 번째 줄 옵션은 최대 유니크 등급으로 나옵니다." />
+                        <TextView
+                            android:paddingTop="8dp"
+                            android:textSize="14dp"
+                            android:textColor="@color/contentColor"
+                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="※ 사용되지 않는, 잡옵에 가까운 옵션은 정보에서 제외했습니다." />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:id="@+id/Tab3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="55dp">
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/contentColor"
+                            android:background="#4DD22DFF"
+                            android:padding="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:textStyle="bold"
+                            android:textSize="17dp"
+                            android:text="에픽 등급" />
+                        <TextView
+                            android:textSize="15dp"
+                            android:paddingTop="8dp"
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="상태이상에 걸린 대상 공격 시 데미지 4 ~ 5 % 증가" />
+                        <TextView
+                            android:textSize="15dp"
+                            android:paddingTop="8dp"
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="크리티컬 확률 5 ~ 10 % 증가" />
+                        <TextView
+                            android:textSize="15dp"
+                            android:paddingTop="8dp"
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="버프 스킬의 지속시간 19 ~ 25 % 증가" />
+                        <TextView
+                            android:textSize="15dp"
+                            android:paddingTop="8dp"
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="메소 획득량 8 ~ 10 % 증가" />
+                        <TextView
+                            android:textSize="15dp"
+                            android:paddingTop="8dp"
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="아이템 획득 확률 8 ~ 10 % 증가" />
+                        <TextView
+                            android:textSize="15dp"
+                            android:paddingTop="8dp"
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="공격력 6 ~ 12 증가" />
+                        <TextView
+                            android:textSize="15dp"
+                            android:paddingTop="8dp"
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="마력 6 ~ 12 증가" />
+                        <TextView
+                            android:textSize="15dp"
+                            android:paddingTop="8dp"
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="능력치 15 ~ 20 증가" />
+                        <TextView
+                            android:textSize="15dp"
+                            android:paddingTop="8dp"
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="능력치 15 ~ 20 증가, 다른 능력치 8 ~ 10 증가" />
+                        <TextView
+                            android:paddingTop="8dp"
+                            android:textSize="14dp"
+                            android:textColor="@color/contentColor"
+                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="※ 사용되지 않는, 잡옵에 가까운 옵션은 정보에서 제외했습니다." />
+
+                    </LinearLayout>
+                </FrameLayout>
+            </TabHost>
+
+        </LinearLayout>
+    </ScrollView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/adLout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:paddingTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.gms.ads.admanager.AdManagerAdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adManagerAdView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/googleAD">
+        </com.google.android.gms.ads.admanager.AdManagerAdView>
+
+        <com.adknowva.adlib.BannerAdView
+            android:id="@+id/banner_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

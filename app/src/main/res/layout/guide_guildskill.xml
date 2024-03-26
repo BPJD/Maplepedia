@@ -1,0 +1,1476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="25dp"
+                android:textColor="@color/contentColor"
+                android:gravity="center"
+                android:padding="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="길드 스킬 정보" />
+
+            <TabHost
+                android:id="@android:id/tabhost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:tabStripEnabled="false" />
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:id="@+id/Tab1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="60dp">
+
+                        <LinearLayout
+                            android:paddingTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/skill_91000011_icon"
+                                android:layout_gravity="center"
+                                />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="잔돈이 눈에 띄네" />
+
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="[패시브, 마스터 레벨 3]" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="사냥에서 메소를 획득할 때 추가 메소를 획득한다." />
+
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="사냥에서 메소 획득 시 4 / 6 / 8 메소 추가획득" />
+
+
+                        <LinearLayout
+                            android:paddingTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/skill_91000008_icon"
+                                android:layout_gravity="center"
+                                />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="장사꾼" />
+
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="[패시브, 마스터 레벨 3]" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="상점에서 물건을 구매 시 싸게 살 수 있다. 단, 일부 아이템에는 적용되지 않는다." />
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="상점에서 물건 구매시 2 / 3 / 4 % 싸게 구매 가능. 단, 판매 가격 대비 구매 가격이 70% 이상일 경우 적용되지 않음" />
+                        <TextView
+                            android:textColor="#ff7b00"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="[스킬 습득 조건 : 잔돈이 눈에 띄네 3레벨]" />
+                        <TextView
+                            android:textColor="#ff7b00"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="[스킬 습득 조건 : 길드 레벨 10 이상]" />
+
+                        <LinearLayout
+                            android:paddingTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/skill_91000009_icon"
+                                android:layout_gravity="center"
+                                />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="길드 정기 지원 I" />
+
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="[패시브, 마스터 레벨 4]" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="매주 월요일마다 30분동안 맵에 있는 전체 캐릭터에게 공격력과 마력을 20 올려주는 길드의 축복과 HP/MP를 모두 회복시켜주는 G포션을 지급받을 수 있다." />
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="매주 월요일마다 G포션 25 / 50 / 75 / 100개, 길드의 축복 5 / 10 / 15 / 20개 지급" />
+
+                        <LinearLayout
+                            android:paddingTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/skill_91000009_icon"
+                                android:layout_gravity="center"
+                                />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="길드 정기 지원 II" />
+
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="[패시브, 마스터 레벨 1]" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="매주 월요일마다 한 층 강화된 길드 정기 지원을 받을 수 있다." />
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="매주 월요일마다 G포션 100개, 길드의 축복 5개 추가 지급" />
+                        <TextView
+                            android:textColor="#ff7b00"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="[스킬 습득 조건 : 길드 레벨 10 이상]" />
+                        <TextView
+                            android:textColor="#ff7b00"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="[스킬 습득 조건 : 길드 정기 지원 I 4레벨]" />
+
+                        <LinearLayout
+                            android:paddingTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/skill_91000009_icon"
+                                android:layout_gravity="center"
+                                />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="길드 정기 지원 III" />
+
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="[패시브, 마스터 레벨 1]" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="매주 월요일마다 한 층 강화된 길드 정기 지원을 받을 수 있다." />
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="매주 월요일마다 G포션 100개, 길드의 축복 5개 추가 지급" />
+                        <TextView
+                            android:textColor="#ff7b00"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="[스킬 습득 조건 : 길드 레벨 20 이상]" />
+                        <TextView
+                            android:textColor="#ff7b00"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="[스킬 습득 조건 : 길드 정기 지원 II 1레벨]" />
+
+                        <LinearLayout
+                            android:paddingTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/skill_91000026_icon"
+                                android:layout_gravity="center"
+                                />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="함께라서 덜 아파" />
+
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="[패시브, 마스터 레벨 3]" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="길드원이 받는 피해를 4 / 7 / 10 % 감소시킨다." />
+
+                        <LinearLayout
+                            android:paddingTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/skill_91000027_icon"
+                                android:layout_gravity="center"
+                                />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="길드의 노하우" />
+
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="[패시브, 마스터 레벨 1]" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="길드원이 101레벨 이상 200레벨 이하 일반 몬스터를 사냥할 때 경험치 획득량이 5% 증가한다." />
+                        <TextView
+                            android:textColor="#ff7b00"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="[스킬 습득 조건 : 길드 레벨 3 이상]" />
+
+                        <LinearLayout
+                            android:paddingTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/skill_91000028_icon"
+                                android:layout_gravity="center"
+                                />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="길드의 매운 맛 I" />
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="[패시브, 마스터 레벨 3]" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="길드원의 공격력과 마력을 2 / 4 / 6 증가시킨다." />
+                        <TextView
+                            android:textColor="#ff7b00"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="[스킬 습득 조건 : 길드 레벨 5 이상]" />
+
+                        <LinearLayout
+                            android:paddingTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/skill_91000029_icon"
+                                android:layout_gravity="center"
+                                />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="길드의 매운 맛 II" />
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="[패시브, 마스터 레벨 1]" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="길드원의 공격력과 마력을 4 증가시킨다." />
+                        <TextView
+                            android:textColor="#ff7b00"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="[스킬 습득 조건 : 길드 레벨 15 이상]" />
+                        <TextView
+                            android:textColor="#ff7b00"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="[스킬 습득 조건 : 길드의 매운 맛 I 3레벨]" />
+
+                        <LinearLayout
+                            android:paddingTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/skill_91000029_icon"
+                                android:layout_gravity="center"
+                                />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="길드의 매운 맛 III" />
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="[패시브, 마스터 레벨 1]" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="길드원의 공격력과 마력을 5 증가시킨다." />
+                        <TextView
+                            android:textColor="#ff7b00"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="[스킬 습득 조건 : 길드 레벨 25 이상]" />
+                        <TextView
+                            android:textColor="#ff7b00"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="[스킬 습득 조건 : 길드의 매운 맛 II 1레벨]" />
+
+                        <LinearLayout
+                            android:paddingTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/skill_91000038_icon"
+                                android:layout_gravity="center"
+                                />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="내 안에 별 있다" />
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="[패시브, 마스터 레벨 3]" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="길드원의 스타포스를 5 / 10 / 15 증가시킨다." />
+                        <TextView
+                            android:textColor="#ff7b00"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="[스킬 습득 조건 : 길드 레벨 5 이상]" />
+
+                        <LinearLayout
+                            android:paddingTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/skill_91001016_icon"
+                                android:layout_gravity="center"
+                                />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="너에게 갈게" />
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="[액티브, 마스터 레벨 3]" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="같은 채널의 접속중인 지정한 길드원의 위치로 이동한다. 일부 맵에서는 사용이 제한된다." />
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="지정한 길드원의 위치로 이동, 재사용 대기시간 5 / 4 / 3 시간" />
+                        <TextView
+                            android:textColor="#ff7b00"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="[스킬 습득 조건 : 길드 레벨 5 이상]" />
+
+                        <LinearLayout
+                            android:paddingTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/skill_91001017_icon"
+                                android:layout_gravity="center"
+                                />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="나에게 오라" />
+
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="[액티브, 마스터 레벨 3]" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="같은 채널의 지정한 길드원을 자신의 위치로 소환. 단, 일부 맵에서는 사용이 제한된다. 대상 길드원이 이동을 거절할 경우에도 재사용 대기시간이 적용되니 사전에 말해 두도록 하자." />
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="지정한 길드원을 자신의 위치로 소환, 재사용 대기시간 5 / 4 / 3 시간" />
+                        <TextView
+                            android:textColor="#ff7b00"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="[스킬 습득 조건 : 길드 레벨 15 이상]" />
+                        <TextView
+                            android:textColor="#ff7700"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="[스킬 습득 조건 : 너에게 갈게 3레벨]" />
+
+                        <LinearLayout
+                            android:paddingTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/skill_91000033_icon"
+                                android:layout_gravity="center"
+                                />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="졸개들은 물렀거라" />
+
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="[패시브, 마스터 레벨 4]" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="길드원의 일반 몬스터 공격 시 데미지가 3 / 6 / 9 / 12 % 증가한다." />
+                        <TextView
+                            android:textColor="#ff7b00"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="[스킬 습득 조건 : 길드 레벨 10 이상]" />
+
+                        <LinearLayout
+                            android:paddingTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/skill_91000012_icon"
+                                android:layout_gravity="center"
+                                />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="강화의 달인" />
+
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="[패시브, 마스터 레벨 4]" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="일반 주문서 및 주문의 흔적을 이용한 주문서 강화 시 성공 확률이 증가한다." />
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="일반 주문서 및 주문의 흔적을 이용한 주문서 강화 시 성공 확률 +1 / +2 / +3 / +4 % 증가" />
+                        <TextView
+                            android:textColor="#ff7b00"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="[스킬 습득 조건 : 길드 레벨 15 이상]" />
+
+                        <LinearLayout
+                            android:paddingTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/skill_91000013_icon"
+                                android:layout_gravity="center"
+                                />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="파괴는 남의 일" />
+
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="[패시브, 마스터 레벨 4]" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="주문서에 의한 아이템 파괴 확정 시, 1 / 2 / 3 / 4 % 확률로 파괴되지 않는다." />
+                        <TextView
+                            android:textColor="#ff7b00"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="[스킬 습득 조건 : 길드 레벨 20 이상]" />
+                        <TextView
+                            android:textColor="#ff7b00"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="[스킬 습득 조건 : 강화의 달인 4레벨]" />
+
+                        <LinearLayout
+                            android:paddingTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/skill_91000014_icon"
+                                android:layout_gravity="center"
+                                />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="실패를 두려워 않는" />
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="[패시브, 마스터 레벨 4]" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="업그레이드 가능 횟수를 소비하는 주문서 및 주문의 흔적을 이용한 주문서 강화 실패 시 1 / 2 / 3 / 4 % 확률로 업그레이드 가능 횟수 차감하지 않는다." />
+                        <TextView
+                            android:textColor="#ff7b00"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="[스킬 습득 조건 : 길드 레벨 25 이상]" />
+                        <TextView
+                            android:textColor="#ff7b00"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="[스킬 습득 조건 : 파괴는 남의 일 4레벨]" />
+
+
+                        <LinearLayout
+                            android:paddingTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/skill_91001020_icon"
+                                android:layout_gravity="center"
+                                />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="일어나라 용사여" />
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="[액티브, 마스터 레벨 3]" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="모든 파티원을 부활시킨다. 길드원일 경우 MP도 최대치까지 회복시킨다." />
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="파티원 전원 부활, 재사용 대기시간 5 / 4 / 3 시간" />
+                        <TextView
+                            android:textColor="#ff7700"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="[스킬 습득 조건 : 길드 레벨 15 이상]" />
+
+                        <LinearLayout
+                            android:paddingTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/skill_91000034_icon"
+                                android:layout_gravity="center"
+                                />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="팔방미인" />
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="[패시브, 마스터 레벨 3]" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="길드원의 힘, 민첩, 지력, 운 스탯이 16 / 28 / 40, 체력이 800 / 1400 / 2000 증가한다." />
+                        <TextView
+                            android:textColor="#ff7700"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="[스킬 습득 조건 : 길드 레벨 20 이상]" />
+
+                        <LinearLayout
+                            android:paddingTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/skill_91000015_icon"
+                                android:layout_gravity="center"
+                                />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="죽음이 두렵지 않은" />
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="[패시브, 마스터 레벨 3]" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="사망 패널티 지속시간이 10 / 20 / 30 % 감소한다." />
+                        <TextView
+                            android:textColor="#ff7700"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="[스킬 습득 조건 : 길드 레벨 20 이상]" />
+
+                        <LinearLayout
+                            android:paddingTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/skill_91000035_icon"
+                                android:layout_gravity="center"
+                                />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="아케인포스가 함께하기를" />
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="[패시브, 마스터 레벨 4]" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="길드원의 아케인포스를 15 / 20 / 25 / 30 증가시킨다. [또 하나의 힘, 아케인포스] 를 완료해야 효과를 받을 수 있다." />
+                        <TextView
+                            android:textColor="#ff7700"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="[스킬 습득 조건 : 길드 레벨 25 이상]" />
+
+                        <LinearLayout
+                            android:paddingTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/skill_91001036_icon"
+                                android:layout_gravity="center"
+                                />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="샤레니안의 악마 라이딩" />
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="[액티브, 마스터 레벨 1]" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="샤레니안의 악마 라이딩을 타고 이동할 수 있다. 점프 키를 두번 연달아 누르면 고공 비행 스킬을 사용할 수 있다.\n이동속도 190, 점프력 120" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:id="@+id/Tab2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="60dp">
+                        <LinearLayout
+                            android:paddingTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/skill_91001022_icon"
+                                android:layout_gravity="center"
+                                />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="보스 킬링 머신" />
+
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="[버프, 마스터 레벨 15]" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="일정 시간동안 보스 몬스터 공격 시 데미지가 증가한다." />
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2 / 30 분 동안 보스 몬스터 공격 시 데미지 2% / 30% 증가" />
+                        <TextView
+                            android:textColor="#ff7700"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="[재사용 대기시간 : 116 / 60 분]" />
+
+                        <LinearLayout
+                            android:paddingTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/skill_91001023_icon"
+                                android:layout_gravity="center"
+                                />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="방어력은 숫자일 뿐" />
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="[버프, 마스터 레벨 15]" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="일정 시간동안 공격 시 적의 방어를 일정 비율 무시한다." />
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2 / 30 분 동안 적의 방어율 2% / 30% 무시" />
+                        <TextView
+                            android:textColor="#ff7700"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="[재사용 대기시간 : 116 / 60 분]" />
+
+                        <LinearLayout
+                            android:paddingTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/skill_91001024_icon"
+                                android:layout_gravity="center"
+                                />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="길드의 이름으로" />
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="[버프, 마스터 레벨 15]" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="일정 시간동안 데미지가 증가한다." />
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2 / 30 분 동안 데미지 2% / 30% 증가" />
+                        <TextView
+                            android:textColor="#ff7700"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="[재사용 대기시간 : 116 / 60 분]" />
+
+                        <LinearLayout
+                            android:paddingTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/skill_91001025_icon"
+                                android:layout_gravity="center"
+                                />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="크게 한방" />
+                                <TextView
+                                    android:textColor="@color/contentColor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="[버프, 마스터 레벨 15]" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="일정 시간동안 크리티컬 데미지가 증가한다." />
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2 / 30 분 동안 데미지 2% / 30% 증가" />
+                        <TextView
+                            android:textColor="#ff7700"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="[재사용 대기시간 : 116 / 60 분]" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:id="@+id/Tab3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="60dp">
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:background="#ff7b00"
+                            android:paddingLeft="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="보스 별 보상 기여도" />
+                        <TextView
+                            android:textSize="16dp"
+                            android:textColor="@color/contentColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="(개인 / 길드원과 파티)" />
+
+                        <TextView
+                            android:textSize="16dp"
+                            android:textColor="@color/contentColor"
+                            android:paddingTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="자쿰" />
+
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:paddingTop="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="노말 : 100 / 500" />
+
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:paddingTop="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="카오스 : 1000 / 2000" />
+
+                        <TextView
+                            android:textSize="16dp"
+                            android:textColor="@color/contentColor"
+                            android:paddingTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="매그너스" />
+
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:paddingTop="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="이지 : 100 / 500" />
+
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:paddingTop="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="노말 : 500 / 2000" />
+
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:paddingTop="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="하드 : 1250 / 2500" />
+
+                        <TextView
+                            android:textSize="16dp"
+                            android:textColor="@color/contentColor"
+                            android:paddingTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="힐라" />
+
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:paddingTop="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="노말 : 150 / 1000" />
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:paddingTop="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="하드 : 1000 / 2000" />
+
+                        <TextView
+                            android:textSize="16dp"
+                            android:textColor="@color/contentColor"
+                            android:paddingTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="파풀라투스" />
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:paddingTop="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="노말 : 500 / 2000" />
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:paddingTop="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="카오스 : 1000 / 3000" />
+
+                        <TextView
+                            android:textSize="16dp"
+                            android:textColor="@color/contentColor"
+                            android:paddingTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="블러디퀸" />
+
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:paddingTop="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="노말 : 150 / 1000" />
+
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:paddingTop="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="카오스 : 1000 / 2000" />
+
+                        <TextView
+                            android:textSize="16dp"
+                            android:textColor="@color/contentColor"
+                            android:paddingTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="피에르" />
+
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:paddingTop="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="노말 : 150 / 1000" />
+
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:paddingTop="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="카오스 : 1000 / 2000" />
+
+                        <TextView
+                            android:textSize="16dp"
+                            android:textColor="@color/contentColor"
+                            android:paddingTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="반반" />
+
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:paddingTop="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="노말 : 150 / 1000" />
+
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:paddingTop="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="카오스 : 1000 / 2000" />
+
+                        <TextView
+                            android:textSize="16dp"
+                            android:textColor="@color/contentColor"
+                            android:paddingTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="벨룸" />
+
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:paddingTop="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="노말 : 150 / 1000" />
+
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:paddingTop="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="카오스 : 1250 / 2500" />
+
+                        <TextView
+                            android:textSize="16dp"
+                            android:textColor="@color/contentColor"
+                            android:paddingTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="반 레온" />
+
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:paddingTop="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="노말 : 250 / 1500" />
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:paddingTop="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="하드 : 500 / 2000" />
+
+                        <TextView
+                            android:textSize="16dp"
+                            android:textColor="@color/contentColor"
+                            android:paddingTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="혼테일" />
+
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:paddingTop="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="노말 : 150 / 1000" />
+
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:paddingTop="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="카오스 : 250 / 1500" />
+
+                        <TextView
+                            android:textSize="16dp"
+                            android:textColor="@color/contentColor"
+                            android:paddingTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="아카이럼" />
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:paddingTop="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="노말 : 500 / 2000" />
+
+                        <TextView
+                            android:textSize="16dp"
+                            android:textColor="@color/contentColor"
+                            android:paddingTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="핑크빈" />
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:paddingTop="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="노말 : 250 / 1500" />
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:paddingTop="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="카오스 : 1000 / 2000" />
+
+                        <TextView
+                            android:textSize="16dp"
+                            android:textColor="@color/contentColor"
+                            android:paddingTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="시그너스" />
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:paddingTop="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="이지, 노말 : 1000 / 2000" />
+
+                        <TextView
+                            android:textSize="16dp"
+                            android:textColor="@color/contentColor"
+                            android:paddingTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="스우" />
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:paddingTop="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="노말 : 1500 / 3000" />
+
+                        <TextView
+                            android:textSize="16dp"
+                            android:textColor="@color/contentColor"
+                            android:paddingTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="데미안" />
+                        <TextView
+                            android:textColor="@color/contentColor"
+                            android:paddingTop="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="노말 : 1500 / 3000" />
+                    </LinearLayout>
+                </FrameLayout>
+            </TabHost>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

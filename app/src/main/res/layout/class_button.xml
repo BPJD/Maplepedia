@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/classButton_height"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/classButton_margin"
+        android:layout_weight="333"
+        android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+        android:autoSizeTextType="uniform"
+        android:backgroundTint="@color/bg_button"
+        android:drawableLeft="@drawable/class_warrior"
+        android:drawableTint="@color/classIcon"
+        android:background="@drawable/app_design_background"
+        android:maxLines="1"
+        android:onClick="classButtonClicked"
+        android:layout_marginLeft="@dimen/classButton_paddingH"
+        android:layout_marginTop="@dimen/classButton_paddingV"
+        android:layout_marginRight="@dimen/classButton_paddingH"
+        android:layout_marginBottom="@dimen/classButton_paddingV"
+        android:tag="1"
+        android:textColor="@color/contentColor" />
+
+</LinearLayout>

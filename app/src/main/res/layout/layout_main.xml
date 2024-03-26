@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/login_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main"
+    android:orientation="vertical">
+
+    <!-- 툴바 -->
+    <include layout="@layout/appbar"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/adLout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+        <LinearLayout
+            android:id="@+id/activity_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/classInfo_viewsMargin"
+            android:layout_marginLeft="@dimen/classInfo_viewsMargin"
+            android:layout_marginRight="@dimen/classInfo_viewsMargin"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/app_design_background"
+            android:backgroundTint="@color/backgroundColor"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/contentColor"
+                    android:textSize="20dp"
+                    android:text="메이플 백과사전 패치노트"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="@dimen/classInfo_viewsMargin"
+                    android:layout_marginBottom="@dimen/classInfo_viewsMargin"
+                    android:background="@color/contentColor"
+                    />
+
+                <TextView
+                    android:paddingTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text=" ○ 앱 시스템"
+                    android:textStyle="bold"
+                    android:textSize="16dp"
+                    android:textColor="@color/contentColor"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="- 안드로이드 14에 대응할 수 있습니다. 안드로이드 14의 경우는 현재 노티바(알림 창)가 나오지 않습니다."
+                    android:textColor="@color/contentColor"/>
+
+                <TextView
+                    android:paddingTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text=" ○ 직업 정보"
+                    android:textStyle="bold"
+                    android:textSize="16dp"
+                    android:textColor="@color/contentColor"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="- 오타 몇 개를 수정했습니다."
+                    android:textColor="@color/contentColor"/>
+
+                <TextView
+                    android:paddingTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text=" ○ 참고 자료"
+                    android:textStyle="bold"
+                    android:textSize="16dp"
+                    android:textColor="@color/contentColor"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="- 주문서 정보를 추가했습니다. 장비 파츠(무기, 방어구 등)별로 어떤 주문서가 붙는지, 효과 등을 볼 수 있습니다.\n보편적으로 사용되는 레벨제(앱솔, 아케인 등) 장비 기준으로 수치를 적어두었습니다."
+                    android:textColor="@color/contentColor"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="- 무기 공격력 추옵 정보에서 [파프니르] 무기 정보를 삭제했습니다. 해당 화면의 로딩 시간이 상당히 긴 편인데, 불러오는 데이터를 줄여 최적화하는 편이 좋겠다고 판단했습니다. 또한, 이젠 파프니르 무기 자체의 가치가 예전같지 않다는 것을 잘 알고 있습니다."
+                    android:textColor="@color/contentColor"/>
+
+                <TextView
+                    android:paddingTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text=" ○ 보스 정보"
+                    android:textStyle="bold"
+                    android:textSize="16dp"
+                    android:textColor="@color/contentColor"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="- 이제 듄켈에서 똥 피하기를 하지 않아도 됩니다. 해당 패턴 정보를 삭제했습니다."
+                    android:textColor="@color/contentColor"/>
+
+                <TextView
+                    android:paddingTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text=" ○ 확인된 문제"
+                    android:textStyle="bold"
+                    android:textSize="16dp"
+                    android:textColor="@color/contentColor"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="- 주문서 정보에서 방어구 스탯 100% 주문서 아이콘이 나오지 않습니다."
+                    android:textColor="@color/contentColor"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/contentColor"
+                    android:textSize="20dp"
+                    android:text="지난 업데이트"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="@dimen/classInfo_viewsMargin"
+                    android:layout_marginBottom="@dimen/classInfo_viewsMargin"
+                    android:background="@color/contentColor"
+                    />
+
+                <TextView
+                    android:paddingTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text=" ○ 앱 기능"
+                    android:textStyle="bold"
+                    android:textSize="16dp"
+                    android:textColor="@color/contentColor"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="- 노티바(알림 창) 기능을 앱 특성에 맞게 변화를 주었습니다.\n이제 노티바를 통해 빠르게 환산 스탯, 캐릭터정보 등 게임 관련 정보를 찾을 수 있습니다."
+                    android:textColor="@color/contentColor"/>
+
+                <TextView
+                    android:paddingTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text=" ○ 직업/스킬 정보"
+                    android:textStyle="bold"
+                    android:textSize="16dp"
+                    android:textColor="@color/contentColor"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="- 모든 직업의 신규 6차 마스터리 코어를 추가했습니다."
+                    android:textColor="@color/contentColor"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="- 여러 직업의 크리티컬 확률 수치가 변동되었습니다."
+                    android:textColor="@color/contentColor"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="- 1월 18일 밸?패 를 적용하였습니다. 6차 오리진 스킬의 수치가 크게 변동되었습니다."
+                    android:textColor="@color/contentColor"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="- [그 손가락] 모양이 포함된 스킬 아이콘을 변경했습니다."
+                    android:textColor="@color/contentColor"/>
+
+                <TextView
+                    android:paddingTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text=" ○ 보스몬스터 정보"
+                    android:textStyle="bold"
+                    android:textSize="16dp"
+                    android:textColor="@color/contentColor"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="- 우르스 정보를 볼 수 없게 했습니다."
+                    android:textColor="@color/contentColor"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="- [수상한 큐브] 보상 정보를 삭제했습니다."
+                    android:textColor="@color/contentColor"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="- [그 손가락] 모양이 포함된 보스 일러스트를 변경했습니다."
+                    android:textColor="@color/contentColor"/>
+
+                <TextView
+                    android:paddingTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text=" ○ 앱 메뉴"
+                    android:textStyle="bold"
+                    android:textSize="16dp"
+                    android:textColor="@color/contentColor"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="- API를 이용하여 참고하기 좋은 사이트 등과 연결되는 메뉴를 추가했습니다.\n앱을 통해 쉽게 환산 스탯, 메이플지지와 같은 사이트에 접속할 수 있습니다."
+                    android:textColor="@color/contentColor"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="- 게임 공식 홈페이지 메뉴를 다시 활성화 했습니다."
+                    android:textColor="@color/contentColor"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        </ScrollView>
+
+
+        <RelativeLayout
+            android:id="@+id/adLout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:paddingTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.gms.ads.admanager.AdManagerAdView
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/adManagerAdView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                ads:adSize="BANNER"
+                ads:adUnitId="@string/googleAD">
+            </com.google.android.gms.ads.admanager.AdManagerAdView>
+
+            <com.adknowva.adlib.BannerAdView
+                android:id="@+id/banner_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                />
+
+            <com.gomfactory.adpie.sdk.AdView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/adpie_Tbanner"
+                android:layout_centerHorizontal="true"
+                slotID="653874a28c8d1d33fcd63fd6" >
+            </com.gomfactory.adpie.sdk.AdView>
+
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

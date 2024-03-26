@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="classOptionList">
+        <item>직업군</item>
+        <item>직업 계열</item>
+    </string-array>
+
+    <string-array name="sim_class">
+        <item>전사</item>
+        <item>마법사</item>
+        <item>궁수</item>
+        <item>도적</item>
+        <item>해적</item>
+    </string-array>
+
+    <string-array name="sim_weapons">
+        <item>한손검</item>
+        <item>한손도끼</item>
+        <item>한손둔기</item>
+        <item>두손검</item>
+        <item>두손도끼</item>
+        <item>두손둔기</item>
+        <item>창</item>
+        <item>폴암</item>
+        <item>데스페라도</item>
+        <item>태도/대검</item>
+        <item>건틀렛리볼버</item>
+        <item>튜너</item>
+        <item>완드</item>
+        <item>스태프</item>
+        <item>샤이닝로드</item>
+        <item>ESP리미터</item>
+        <item>매직건틀렛</item>
+        <item>활</item>
+        <item>석궁</item>
+        <item>듀얼보우건</item>
+        <item>에인션트 보우</item>
+        <item>브레스 슈터</item>
+        <item>아대</item>
+        <item>단검</item>
+        <item>케인</item>
+        <item>체인</item>
+        <item>부채</item>
+        <item>차크람</item>
+        <item>에너지소드</item>
+        <item>건</item>
+        <item>너클</item>
+        <item>핸드캐논</item>
+        <item>소울슈터</item>
+        <!-- 여기에 더 많은 메뉴 항목 추가 -->
+    </string-array>
+
+
+    <string-array name="sim_warrior_weapons">
+        <item>한손검</item>
+        <item>한손도끼</item>
+        <item>한손둔기</item>
+        <item>두손검</item>
+        <item>두손도끼</item>
+        <item>두손둔기</item>
+        <item>창</item>
+        <item>폴암</item>
+        <item>데스페라도</item>
+        <item>태도/대검</item>
+        <item>건틀렛리볼버</item>
+        <item>튜너</item>
+        <!-- 여기에 더 많은 메뉴 항목 추가 -->
+    </string-array>
+
+    <string-array name="sim_mage_weapons">
+        <item>완드</item>
+        <item>스태프</item>
+        <item>샤이닝로드</item>
+        <item>ESP리미터</item>
+        <item>매직건틀렛</item>
+        <!-- 여기에 더 많은 메뉴 항목 추가 -->
+    </string-array>
+
+    <string-array name="sim_archer_weapons">
+        <item>활</item>
+        <item>석궁</item>
+        <item>듀얼보우건</item>
+        <item>에인션트 보우</item>
+        <item>브레스 슈터</item>
+        <!-- 여기에 더 많은 메뉴 항목 추가 -->
+    </string-array>
+
+    <string-array name="sim_thief_weapons">
+        <item>아대</item>
+        <item>단검</item>
+        <item>케인</item>
+        <item>체인</item>
+        <item>부채</item>
+        <item>차크람</item>
+        <item>에너지소드</item>
+        <!-- 여기에 더 많은 메뉴 항목 추가 -->
+    </string-array>
+
+    <string-array name="sim_pirate_weapons">
+        <item>건</item>
+        <item>너클</item>
+        <item>핸드캐논</item>
+        <item>소울슈터</item>
+        <item>에너지소드</item>
+        <!-- 여기에 더 많은 메뉴 항목 추가 -->
+    </string-array>
+</resources>

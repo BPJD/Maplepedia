@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:exported="true"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MaplePedia_BigPillar"
+        android:networkSecurityConfig="@xml/network_security_config"
+        tools:replace="android:networkSecurityConfig"
+        android:usesCleartextTraffic="false"
+        >
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713"/>
+
+        <meta-data android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleInstance"
+            android:clearTaskOnLaunch="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ClassActivity" android:exported="true"/>
+        <activity android:name=".ClassInfoActivity" android:exported="true"/>
+        <activity android:name=".DeveloperActivity" android:exported="true"/>
+        <activity android:name=".ReferenceActivity" android:exported="true"/>
+        <activity android:name=".BossInfoActivity" android:exported="true"/>
+        <activity android:name=".BossActivity" android:exported="true"/>
+        <activity android:name=".RefAbility" android:exported="true"/>
+        <activity android:name=".RefVskill" android:exported="true"/>
+        <activity android:name=".GuideSoulskill" android:exported="true"/>
+        <activity android:name=".GuideRecipeM" android:exported="true"/>
+        <activity android:name=".GuideGuild" android:exported="true"/>
+        <activity android:name=".RefWeaponOptionActivity" android:exported="true"/>
+        <activity android:name=".RefSeedring" android:exported="true"/>
+        <activity android:name=".RefL_Union" android:exported="true"/>
+        <activity android:name=".RefLink" android:exported="true"/>
+        <activity android:name=".SimulatorCombat" android:exported="true"/>
+        <activity android:name=".SimulatorGenesis" android:exported="true"/>
+        <activity android:name=".SimulatorGenesisEnchant" android:exported="true"/>
+        <activity android:name=".RefScroll" android:exported="true"/>
+
+
+    </application>
+
+</manifest>

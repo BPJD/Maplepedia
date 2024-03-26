@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/background_up"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_color_up"
+        android:scaleType="centerCrop"
+        android:tint="#FFFB00"
+        tools:ignore="UseAppTint"/>
+    <ImageView
+        android:id="@+id/background_down"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_color_down"
+        android:scaleType="centerCrop"
+        android:tint="#8E50FF"
+        tools:ignore="UseAppTint" />
+
+    <LinearLayout
+        android:id="@+id/activity_name"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/adLout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/ref_info_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="전투 보정 계산기"
+                android:textColor="@color/contentColor"
+                android:textSize="@dimen/menuName_TextSize"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/app_design_background"
+                android:backgroundTint="@color/backgroundColor"
+                android:layout_margin="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:checkedButton="@id/sim_rev_rbtStar"
+                        android:weightSum="3">
+
+                        <RadioButton
+                            android:id="@+id/sim_rev_rbtStar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:onClick="onRadioButtonClicked"
+                            android:text="스타포스"/>
+
+                        <RadioButton
+                            android:id="@+id/sim_rev_rbtArcane"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:onClick="onRadioButtonClicked"
+                            android:text="아케인포스"/>
+
+                        <RadioButton
+                            android:id="@+id/sim_rev_rbtAscentic"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:onClick="onRadioButtonClicked"
+                            android:text="어센틱포스"/>
+                    </RadioGroup>
+
+                </LinearLayout>
+
+
+                <androidx.appcompat.widget.AppCompatToggleButton
+                    android:id="@+id/sim_rev_presetBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                    android:autoSizeMinTextSize="10dp"
+                    android:autoSizeTextType="uniform"
+                    android:background="@drawable/button_design"
+                    android:backgroundTint="@color/bg_button"
+                    android:checked="false"
+                    android:padding="@dimen/classButton_margin"
+                    android:textColor="@color/contentColor"
+                    android:textOff="몬스터 프리셋 보기"
+                    android:textOn="프리셋 숨기기" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/sim_rev_preset"
+                    android:visibility="gone"
+                    android:weightSum="2"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                            android:autoSizeMinTextSize="10dp"
+                            android:autoSizeTextType="uniform"
+                            android:background="@drawable/button_design"
+                            android:backgroundTint="@color/bg_button"
+                            android:onClick="presetClicked"
+                            android:padding="@dimen/classButton_margin"
+                            android:tag="0"
+                            android:text="스우 / 데미안"
+                            android:textColor="@color/contentColor" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                            android:autoSizeMinTextSize="10dp"
+                            android:autoSizeTextType="uniform"
+                            android:background="@drawable/button_design"
+                            android:backgroundTint="@color/bg_button"
+                            android:onClick="presetClicked"
+                            android:padding="@dimen/classButton_margin"
+                            android:tag="2"
+                            android:text="이지 윌"
+                            android:textColor="@color/contentColor" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                            android:autoSizeMinTextSize="10dp"
+                            android:autoSizeTextType="uniform"
+                            android:background="@drawable/button_design"
+                            android:backgroundTint="@color/bg_button"
+                            android:onClick="presetClicked"
+                            android:padding="@dimen/classButton_margin"
+                            android:tag="4"
+                            android:text="더스크"
+                            android:textColor="@color/contentColor" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                            android:autoSizeMinTextSize="10dp"
+                            android:autoSizeTextType="uniform"
+                            android:background="@drawable/button_design"
+                            android:backgroundTint="@color/bg_button"
+                            android:onClick="presetClicked"
+                            android:padding="@dimen/classButton_margin"
+                            android:tag="6"
+                            android:text="노말 진 힐라"
+                            android:textColor="@color/contentColor" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                            android:autoSizeMinTextSize="10dp"
+                            android:autoSizeTextType="uniform"
+                            android:background="@drawable/button_design"
+                            android:backgroundTint="@color/bg_button"
+                            android:onClick="presetClicked"
+                            android:padding="@dimen/classButton_margin"
+                            android:tag="1"
+                            android:text="루시드"
+                            android:textColor="@color/contentColor" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                            android:autoSizeMinTextSize="10dp"
+                            android:autoSizeTextType="uniform"
+                            android:background="@drawable/button_design"
+                            android:backgroundTint="@color/bg_button"
+                            android:onClick="presetClicked"
+                            android:padding="@dimen/classButton_margin"
+                            android:tag="3"
+                            android:text="노말/하드 윌"
+                            android:textColor="@color/contentColor" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                            android:autoSizeMinTextSize="10dp"
+                            android:autoSizeTextType="uniform"
+                            android:background="@drawable/button_design"
+                            android:backgroundTint="@color/bg_button"
+                            android:onClick="presetClicked"
+                            android:padding="@dimen/classButton_margin"
+                            android:tag="5"
+                            android:text="듄켈"
+                            android:textColor="@color/contentColor" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                            android:autoSizeMinTextSize="10dp"
+                            android:autoSizeTextType="uniform"
+                            android:background="@drawable/button_design"
+                            android:backgroundTint="@color/bg_button"
+                            android:onClick="presetClicked"
+                            android:padding="@dimen/classButton_margin"
+                            android:tag="7"
+                            android:text="하드 진 힐라"
+                            android:textColor="@color/contentColor" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="24dp"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="16dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="내 능력치"
+                            android:textColor="@color/contentColor"
+                            android:textSize="20dp"
+                            android:gravity="center"
+                            />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/contentColor"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:hint="캐릭터 레벨"
+                            android:id="@+id/sim_rev_myLevel"
+                            android:maxLength="3"
+                            android:layout_marginTop="8dp"
+                            android:nextFocusDown="@id/sim_rev_myForce"
+                            />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/contentColor"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:hint="캐릭터 스타포스"
+                            android:id="@+id/sim_rev_myForce"
+                            android:maxLength="4"
+                            android:layout_marginTop="8dp"
+                            android:nextFocusDown="@id/sim_rev_mobLevel"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="16dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="몬스터 능력치"
+                            android:textColor="@color/contentColor"
+                            android:textSize="20dp"
+                            android:gravity="center"
+                            />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/contentColor"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:hint="몬스터 레벨"
+                            android:id="@+id/sim_rev_mobLevel"
+                            android:maxLength="3"
+                            android:layout_marginTop="8dp"
+                            android:nextFocusDown="@id/sim_rev_mobForce"
+                            />
+
+                        <EditText
+                            android:id="@+id/sim_rev_mobForce"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:hint="몬스터 스타포스"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            android:textColor="@color/contentColor" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                    android:autoSizeMinTextSize="10dp"
+                    android:autoSizeTextType="uniform"
+                    android:background="@drawable/button_design"
+                    android:backgroundTint="@color/bg_button"
+                    android:onClick="applyClicked"
+                    android:padding="@dimen/classButton_margin"
+                    android:tag="0"
+                    android:text="적용하기"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:textColor="@color/contentColor" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="결과"
+                    android:textColor="@color/contentColor"
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    android:layout_marginBottom="12dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="-"
+                    android:textColor="@color/contentColor"
+                    android:textSize="16dp"
+                    android:id="@+id/sim_rev_descLv"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="-"
+                    android:textColor="@color/contentColor"
+                    android:textSize="16dp"
+                    android:layout_marginBottom="12dp"
+                    android:id="@+id/sim_rev_descForce"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="-"
+                    android:textColor="@color/contentColor"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp"
+                    android:id="@+id/sim_rev_sendDamage"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="-"
+                    android:textColor="@color/contentColor"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp"
+                    android:id="@+id/sim_rev_exp"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/adLout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:paddingTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.gms.ads.admanager.AdManagerAdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adManagerAdView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/googleAD">
+        </com.google.android.gms.ads.admanager.AdManagerAdView>
+
+        <com.adknowva.adlib.BannerAdView
+            android:id="@+id/banner_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            />
+
+        <com.gomfactory.adpie.sdk.AdView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/adpie_Tbanner"
+            android:layout_centerHorizontal="true"
+            slotID="653874a28c8d1d33fcd63fd6" >
+        </com.gomfactory.adpie.sdk.AdView>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="게임 정보">
+        <menu>
+            <item
+                android:id="@+id/menu_class"
+                android:icon="@drawable/main_class"
+                android:iconTint="@color/classIcon"
+                android:title="직업/스킬 정보" />
+            <item
+                android:id="@+id/menu_boss"
+                android:icon="@drawable/main_boss"
+                android:iconTint="@color/classIcon"
+                android:title="보스 몬스터 정보" />
+<!--
+            <item
+                android:id="@+id/menu_guide"
+                android:title="메이플 안내서" />
+                -->
+            <item
+                android:id="@+id/menu_refdata"
+                android:icon="@drawable/main_ref"
+                android:iconTint="@color/classIcon"
+                android:title="참고 자료" />
+        </menu>
+    </item>
+
+
+    <item
+        android:title="게임 유틸리티">
+        <menu>
+            <item
+                android:id="@+id/menu_maplegg"
+                android:icon="@drawable/main_search"
+                android:title="Maple.gg 검색" />
+            <item
+                android:id="@+id/menu_stat"
+                android:icon="@drawable/main_stat"
+                android:title="환산 계산기" />
+            <item
+                android:id="@+id/menu_starforce"
+                android:icon="@drawable/main_starforce"
+                android:title="스타포스 시뮬레이터" />
+        </menu>
+    </item>
+
+    <item
+        android:title="게임 홈페이지">
+        <menu>
+            <item
+                android:id="@+id/menu_notice"
+                android:icon="@drawable/main_notice"
+                android:title="게임 공지사항" />
+            <item
+                android:id="@+id/menu_update"
+                android:icon="@drawable/main_update"
+                android:title="게임 업데이트" />
+            <item
+                android:id="@+id/menu_event"
+                android:icon="@drawable/main_event"
+                android:title="이벤트" />
+            <item
+                android:id="@+id/menu_community"
+                android:icon="@drawable/main_commu"
+                android:title="자유게시판" />
+            <item
+                android:id="@+id/menu_ranking"
+                android:icon="@drawable/main_rank"
+                android:title="랭킹 정보" />
+            <item
+                android:id="@+id/menu_tserver"
+                android:icon="@drawable/main_test"
+                android:title="테스트 서버(PC)" />
+        </menu>
+    </item>
+
+
+
+
+    <item
+        android:title="앱 관련">
+        <menu>
+            <!--
+            <item
+                android:id="@+id/menu_option"
+                android:title="앱 설정" />
+            -->
+            <item
+                android:id="@+id/menu_huvle"
+                android:icon="@drawable/huvle_notibar_icon"
+                android:iconTint="@color/classIcon"
+                android:title="허블 브라우저" />
+
+            <item
+                android:id="@+id/menu_dev"
+                android:icon="@drawable/main_dev"
+                android:title="개발자 정보/문의" />
+
+        </menu>
+    </item>
+
+
+    <item
+        android:title="부가 기능">
+        <menu>
+
+            <!--
+                                            <item
+                                                android:id="@+id/menu_reward"
+                                                android:title="보스 결정석 계산기" />
+            -->
+
+            <item
+                android:id="@+id/menu_combat"
+                android:icon="@drawable/main_combat"
+                android:iconTint="@color/classIcon"
+                android:title="전투 보정 계산기(Test)" />
+
+<!--            <item-->
+<!--                android:id="@+id/menu_genesis"-->
+<!--                android:icon="@drawable/main_boss"-->
+<!--                android:iconTint="@color/classIcon"-->
+<!--                android:title="해방무기 시뮬레이터(Test)" />-->
+            <!--
+                                                                        <item
+                                                                            android:id="@+id/menu_hStat"
+                                                                            android:title="하이퍼 스탯 계산기" />
+        -->
+            <!--
+                                                                        <item
+                                                                            android:id="@+id/menu_itemEnchant"
+                                                                            android:title="장비 강화 시뮬레이터" />
+        -->
+
+        </menu>
+    </item>
+
+
+</menu>
+

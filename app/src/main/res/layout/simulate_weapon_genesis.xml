@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/background_up"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_color_up"
+        android:scaleType="centerCrop"
+        android:tint="#37FF00"
+        tools:ignore="UseAppTint"/>
+    <ImageView
+        android:id="@+id/background_down"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_color_down"
+        android:scaleType="centerCrop"
+        android:tint="#FFC900"
+        tools:ignore="UseAppTint" />
+
+    <LinearLayout
+        android:id="@+id/activity_name"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/adLout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/ref_info_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="해방 무기 시뮬레이터"
+                android:textColor="@color/contentColor"
+                android:textSize="@dimen/menuName_TextSize"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:paddingTop="8dp"
+                android:paddingBottom="16dp"
+                />
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/activity_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/classInfo_viewsMargin">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/app_design_background"
+                    android:backgroundTint="@color/backgroundColor"
+                    android:layout_marginBottom="@dimen/classInfo_viewsMargin"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/classInfo_viewsMargin"
+                        android:text="강화 시뮬레이터 설명"
+                        android:textColor="@color/contentColor"
+                        android:textSize="16dp"
+                        android:paddingTop="8dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="6dp"
+                        android:text="당신은 수 개월에 걸친 해방 퀘스트를 끝내고, 드디어 제네시스 무기를 얻었습니다.\n그동안 당신은 많은 양의 메소를 모았고, 마침 이벤트 기간과 겹쳐서 많은 양의 환생의 불꽃을 가지고 있네요.\n이제 모은 재화로, 해방 무기를 강화해야 합니다. 당신은 주어진 재화로 원하는 옵션을 뽑을 수 있을까요?"
+                        android:textColor="@color/contentColor"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="6dp"
+                        android:text=" - 해방 무기는 주흔 15% 완작, 스타포스 22성 강화가 된 상태입니다."
+                        android:textColor="@color/contentColor"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="6dp"
+                        android:text=" - 잠재 능력은 윗잠 유니크, 에디셔널 에픽으로 시작합니다."
+                        android:textColor="@color/contentColor"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/app_design_background"
+                    android:backgroundTint="@color/backgroundColor"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/classInfo_viewsMargin"
+                        android:text="받을 무기를 선택하세요."
+                        android:textColor="@color/contentColor"
+                        android:textSize="16dp"
+                        android:paddingTop="8dp"
+                        android:textStyle="bold" />
+
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:id="@+id/sim_select"
+                        />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/classInfo_viewsMargin"
+                        android:text="메소를 얼마나 가지고 있나요?"
+                        android:textColor="@color/contentColor"
+                        android:textSize="16dp"
+                        android:paddingTop="18dp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/contentColor"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:hint="메소는 억 단위로 입력합니다."
+                        android:id="@+id/sim_meso"
+                        android:maxLength="4"
+                        android:nextFocusDown="@id/sim_fire"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/classInfo_viewsMargin"
+                        android:text="준비한 이벤트 환불은 몇 개인가요?"
+                        android:textColor="@color/contentColor"
+                        android:textSize="16dp"
+                        android:paddingTop="18dp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:weightSum="10"
+                            android:gravity="center"
+                            android:layout_weight="1">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="2"
+                                android:src="@drawable/item_02048717"/>
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/contentColor"
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:hint="영환불 개수"
+                                android:id="@+id/sim_fire"
+                                android:maxLength="3"
+                                android:nextFocusDown="@id/sim_black_fire"
+                                android:layout_weight="8"
+                                android:layout_marginRight="8dp"
+                                />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:weightSum="10"
+                            android:gravity="center"
+                            android:layout_weight="1">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="2"
+                                android:src="@drawable/item_02048753"/>
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/contentColor"
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:hint="검환불 개수"
+                                android:id="@+id/sim_black_fire"
+                                android:maxLength="3"
+                                android:layout_weight="8"
+                                android:layout_marginRight="8dp"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autoSizeMaxTextSize="16dp"
+                        android:autoSizeMinTextSize="10dp"
+                        android:autoSizeTextType="uniform"
+                        android:background="@drawable/button_design"
+                        android:backgroundTint="@color/bg_button"
+                        android:onClick="resetButtonClicked"
+                        android:padding="@dimen/classButton_margin"
+                        android:text="기본값으로 설정하기"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:textColor="@color/contentColor" />
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                    android:autoSizeMinTextSize="10dp"
+                    android:autoSizeTextType="uniform"
+                    android:background="@drawable/button_design"
+                    android:backgroundTint="@color/bg_button_active"
+                    android:onClick="enchantButtonClicked"
+                    android:padding="@dimen/classButton_margin"
+                    android:text="강화 시작!"
+                    android:textStyle="bold"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:textColor="@color/contentColor" />
+
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/adLout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:paddingTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.gms.ads.admanager.AdManagerAdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adManagerAdView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/googleAD">
+        </com.google.android.gms.ads.admanager.AdManagerAdView>
+
+        <com.adknowva.adlib.BannerAdView
+            android:id="@+id/banner_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

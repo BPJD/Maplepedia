@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/boss_statLout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/boss_stat_nameANDdiff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/classInfo_infoMarginTop"
+            android:padding="@dimen/classInfo_viewsMargin"
+            android:text="이지 보스"
+            android:textColor="@color/contentColor"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/boss_stat_reqQuest"
+            android:text="선행 퀘스트 : 없음"
+            android:textColor="@color/contentColor"
+            android:paddingTop="@dimen/bossView_marginTop"
+            android:textSize="15dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/boss_stat_reqLevel"
+            android:text="제한 레벨 : 없음"
+            android:textColor="@color/contentColor"
+            android:paddingTop="@dimen/bossView_marginTop"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/boss_stat_bossLevel"
+            android:text="보스 레벨 : 없음"
+            android:textColor="@color/contentColor"
+            android:paddingTop="@dimen/bossView_marginTop"
+            android:textSize="15dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/boss_stat_bossForce"
+            android:text="아케인/어센틱 포스 : 없음"
+            android:textColor="@color/contentColor"
+            android:paddingTop="@dimen/bossView_marginTop"
+            android:textSize="15dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/boss_stat_HP"
+            android:text="체력 : 없음 (000억)"
+            android:textColor="@color/contentColor"
+            android:paddingTop="@dimen/bossView_marginTop"
+            android:textSize="15dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/boss_stat_HP_perPhase"
+            android:text="1페이즈 : 0\n2페이즈 : 0\n3페이즈 : 0"
+            android:textColor="@color/contentColor"
+            android:paddingTop="@dimen/bossView_marginTop"
+            android:textSize="13dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/boss_stat_isRevision"
+            android:text="모든 속성 공격에 반감?"
+            android:textColor="@color/contentColor"
+            android:paddingTop="@dimen/bossView_marginTop"
+            android:textSize="15dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/boss_stat_def"
+            android:text="방어율 : 300%"
+            android:textColor="@color/contentColor"
+            android:paddingTop="@dimen/bossView_marginTop"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/boss_rewardLout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/classInfo_infoMarginTop"
+            android:padding="@dimen/classInfo_viewsMargin"
+            android:text="보상"
+            android:textColor="@color/contentColor"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/boss_info_rewardPos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/boss_patternLout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/classInfo_infoMarginTop"
+            android:padding="@dimen/classInfo_viewsMargin"
+            android:text="공격 패턴"
+            android:textColor="@color/contentColor"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/boss_info_patternPos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

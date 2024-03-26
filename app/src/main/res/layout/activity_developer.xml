@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/background_up"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_color_up"
+        android:scaleType="centerCrop"
+        android:tint="#5A00FF"
+        tools:ignore="UseAppTint"/>
+    <ImageView
+        android:id="@+id/background_down"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_color_down"
+        android:scaleType="centerCrop"
+        android:tint="#00FFFF"
+        tools:ignore="UseAppTint" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/activity_name"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/class_info_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="개발자 정보"
+                android:textColor="@color/contentColor"
+                android:textSize="@dimen/menuName_TextSize"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                />
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/activity_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/classInfo_viewsMargin">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="1000">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="500"
+                        android:scaleType="centerCrop"
+                        android:forceHasOverlappingRendering="true"
+                        android:src="@drawable/developer" />
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="500">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:orientation="horizontal"
+                            android:weightSum="100">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/classInfo_infoSize"
+                                android:layout_weight="20"
+                                android:orientation="vertical"
+                                android:weightSum="3">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="right|center"
+                                    android:text="개발자 이름"
+                                    android:textColor="@color/contentColor"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="right|center"
+                                    android:text="캐릭터 이름"
+                                    android:textColor="@color/contentColor"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="right|center"
+                                    android:text="주 활동 서버"
+                                    android:textColor="@color/contentColor"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/classInfo_infoSize"
+                                android:layout_weight="10"
+                                android:orientation="vertical"
+                                android:weightSum="3">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="  :  "
+                                    android:textColor="@color/contentColor" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=":"
+                                    android:textColor="@color/contentColor" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=":"
+                                    android:textColor="@color/contentColor" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/classInfo_infoSize"
+                                android:layout_weight="70"
+                                android:orientation="vertical"
+                                android:paddingRight="20dp"
+                                android:weightSum="3">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="left|center"
+                                    android:text="BigPillar"
+                                    android:textColor="@color/contentColor" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="left|center"
+                                    android:text="BP주대 / BP여왕님"
+                                    android:textColor="@color/contentColor" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="left|center"
+                                    android:text="오로라"
+                                    android:textColor="@color/contentColor" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_margin="10dp"
+                    android:background="@color/contentColor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/app_design_background"
+                    android:backgroundTint="@color/backgroundColor"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="4dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="2015년 11월 24일부터 구글에서 1인 개발로 앱 서비스를 시작했고, 2023년 8월에도 혼자 앱 개발/운영을 진행 중입니다. 오랫동안 서비스하며 많은 사용자 분들에게 사랑받는 앱을 개발하게 되어 영광입니다.\n 1인 개발로 운영을 하고 있다고 했지만, 많은 사람들과 인터넷 동료들의 도움을 받고 지식을 얻었기에 앱을 꾸준히 만들 수 있었습니다."
+                            android:textColor="@color/contentColor"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="개발자는 지금도 게임을 플레이 중입니다. 과금은 거의 안 했다 시피 하였으나, 수많은 시간과 노력으로 검은마법사 격수만큼 스펙을 올렸고, 여왕님의 시종으로서 BP여왕님에게 항상 공물을 바치고 있습니다.\n항상 더 많은 정보와 경험을 얻어야 앱 작업을 할 수 있기 때문에, 개발 하면서도 게임 플레이를 놓지 않고 있습니다. 그렇기 때문에 개발 진척이 더딘 감이 있긴 합니다."
+                            android:textColor="@color/contentColor"
+                            android:textSize="14dp"
+                            android:paddingTop="12dp"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/classInfo_infoMarginTop"
+                    android:background="@drawable/app_design_background"
+                    android:backgroundTint="@color/backgroundColor"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/classInfo_viewsMargin"
+                        android:text="앱 환경"
+                        android:textColor="@color/contentColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="4dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="개발 환경 : Android Studio"
+                            android:textColor="@color/contentColor"
+                            android:textSize="14dp" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="기반 언어 : Kotlin"
+                            android:textColor="@color/contentColor"
+                            android:textSize="14dp" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="데이터 유지/관리 : OpenCSV"
+                            android:textColor="@color/contentColor"
+                            android:textSize="14dp" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="이 앱은 화면 광고를 포함하고 있습니다.\n광고 수익은 개발자에게 전달되며, 수익은 더 나은 앱 개발 환경 및 개발자의 인건비, 유지비로 사용됩니다.\n허블 브라우저 제휴를 맺은 앱입니다. 허블뷰의 사용은 개발자에게 큰 도움이 됩니다."
+                            android:textColor="@color/contentColor"
+                            android:textSize="14dp" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="앱 사용 중 문제가 발생했거나, 궁금한 사항 있으면 아래 방법으로 연락 주시면 됩니다. 건의 사항도 모두 받습니다.\n게임에서도 받을 수 있습니다."
+                            android:textColor="@color/contentColor"
+                            android:textSize="14dp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/classInfo_infoMarginTop"
+                    android:background="@drawable/app_design_background"
+                    android:backgroundTint="@color/backgroundColor"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/classInfo_viewsMargin"
+                        android:text="앱 및 개발자 문의 관련"
+                        android:textColor="@color/contentColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="4dp"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:layout_margin="4dp"
+                            android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                            android:autoSizeMinTextSize="10dp"
+                            android:autoSizeTextType="uniform"
+                            android:background="@drawable/button_design"
+                            android:backgroundTint="@color/bg_button"
+                            android:onClick="Developer_play"
+                            android:text="구글 플레이 평점"
+                            android:padding="@dimen/classButton_margin"
+                            android:tag="0"
+                            android:textColor="@color/contentColor" />
+                        <!--
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                            android:autoSizeMinTextSize="10dp"
+                            android:autoSizeTextType="uniform"
+                            android:background="@drawable/button_design"
+                            android:backgroundTint="@color/bg_button"
+                            android:onClick="Developer_email"
+                            android:text="이메일"
+                            android:textColor="@color/contentColor" />
+                            -->
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:layout_margin="4dp"
+                            android:autoSizeMaxTextSize="@dimen/classButton_textMaxSize"
+                            android:autoSizeMinTextSize="10dp"
+                            android:autoSizeTextType="uniform"
+                            android:background="@drawable/button_design"
+                            android:backgroundTint="@color/bg_button"
+                            android:onClick="Developer_blog"
+                            android:text="네이버 블로그"
+                            android:padding="@dimen/classButton_margin"
+                            android:tag="0"
+                            android:textColor="@color/contentColor" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

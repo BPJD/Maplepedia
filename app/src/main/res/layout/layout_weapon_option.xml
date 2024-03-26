@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        >
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/ref_weaponImg"
+            android:layout_weight="10"
+            android:layout_gravity="center"
+            android:src="@drawable/weapon_arc_00"/>
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/ref_weaponName"
+            android:text="무기이름이름"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="10"
+            android:textSize="16dp"
+            android:textColor="@color/contentColor"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" : "
+            android:layout_weight="10"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="16dp"
+            android:textColor="@color/contentColor"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_weight="60"
+            android:textSize="16dp"
+            android:weightSum="9">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ref_weaponTier5"
+                android:text="5추"
+                android:layout_weight="1"
+                android:textSize="16dp"
+                android:textColor="@color/contentColor"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" / "
+                android:layout_weight="1"
+                android:textSize="16dp"
+                android:textColor="@color/contentColor"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ref_weaponTier4"
+                android:text="4추"
+                android:layout_weight="1"
+                android:textSize="16dp"
+                android:textColor="@color/contentColor"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" / "
+                android:layout_weight="1"
+                android:textSize="16dp"
+                android:textColor="@color/contentColor"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ref_weaponTier3"
+                android:text="3추"
+                android:layout_weight="1"
+                android:textSize="16dp"
+                android:textColor="@color/contentColor"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" / "
+                android:layout_weight="1"
+                android:textSize="16dp"
+                android:textColor="@color/contentColor"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ref_weaponTier2"
+                android:text="2추"
+                android:layout_weight="1"
+                android:textSize="16dp"
+                android:textColor="@color/contentColor"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" / "
+                android:layout_weight="1"
+                android:textColor="@color/contentColor"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ref_weaponTier1"
+                android:text="1추"
+                android:layout_weight="1"
+                android:textSize="16dp"
+                android:textColor="@color/contentColor"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
