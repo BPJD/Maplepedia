@@ -27,6 +27,7 @@ class ReferenceActivity : AppCompatActivity() {
             4 -> nextIntent = Intent(this, RefLink::class.java)
             5 -> nextIntent = Intent(this, RefL_Union::class.java)
             6 -> nextIntent = Intent(this, RefScroll::class.java)
+            7 -> nextIntent = Intent(this, RefRecipe::class.java)
         }
 
 

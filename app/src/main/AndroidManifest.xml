@@ -58,6 +58,7 @@
         <activity android:name=".SimulatorGenesis" android:exported="true"/>
         <activity android:name=".SimulatorGenesisEnchant" android:exported="true"/>
         <activity android:name=".RefScroll" android:exported="true"/>
+        <activity android:name=".RefRecipe" android:exported="true"/>
 
 
     </application>

@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <string-array name="ref_recipeType">
+        <item>연금술</item>
+        <item>장비 제작</item>
+        <item>장신구 제작</item>
+    </string-array>
+
     <string-array name="classOptionList">
         <item>직업군</item>
         <item>직업 계열</item>
