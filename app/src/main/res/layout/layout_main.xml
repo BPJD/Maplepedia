@@ -67,6 +67,87 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:text="- 안드로이드 14에서 노티바(알림 창)이 노출됩니다."
+                    android:textColor="@color/contentColor"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="- 안드로이드 14에서 [알람 및 리마인더] 권한을 받습니다. 노티바(알림 창)과 관련한 권한입니다."
+                    android:textColor="@color/contentColor"/>
+
+                <TextView
+                    android:paddingTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text=" ○ 참고 자료"
+                    android:textStyle="bold"
+                    android:textSize="16dp"
+                    android:textColor="@color/contentColor"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="- 전문기술 레시피 정보를 추가했습니다. 전문기술 종류 별 주로 제작되는 아이템의 필요 재료와, 레시피의 수급처를 찾아볼 수 있습니다."
+                    android:textColor="@color/contentColor"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="- 레시피는 [탭]이 아닌 [스피너] 시스템을 도입했습니다. 추후 업데이트에서 다른 화면에서도 [스피너]를 사용하는 것을 고려하고 있습니다."
+                    android:textColor="@color/contentColor"/>
+
+                <TextView
+                    android:paddingTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text=" ○ 확인된 문제"
+                    android:textStyle="bold"
+                    android:textSize="16dp"
+                    android:textColor="@color/contentColor"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="- 주문서 정보에서 방어구 스탯 100% 주문서 아이콘이 나오지 않습니다."
+                    android:textColor="@color/contentColor"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="- 레시피 정보에서 [활전용 티타늄 화살] 아이콘이 나오지 않습니다. 주문서와 마찬가지로, 내부 시트의 첫 번째 항목만 아이콘이 나오지 않고 있습니다."
+                    android:textColor="@color/contentColor"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/contentColor"
+                    android:textSize="20dp"
+                    android:text="지난 업데이트"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="@dimen/classInfo_viewsMargin"
+                    android:layout_marginBottom="@dimen/classInfo_viewsMargin"
+                    android:background="@color/contentColor"
+                    />
+
+                <TextView
+                    android:paddingTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text=" ○ 앱 시스템"
+                    android:textStyle="bold"
+                    android:textSize="16dp"
+                    android:textColor="@color/contentColor"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:text="- 안드로이드 14에 대응할 수 있습니다. 안드로이드 14의 경우는 현재 노티바(알림 창)가 나오지 않습니다."
                     android:textColor="@color/contentColor"/>
 
@@ -129,116 +210,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="- 주문서 정보에서 방어구 스탯 100% 주문서 아이콘이 나오지 않습니다."
-                    android:textColor="@color/contentColor"/>
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="30dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textColor="@color/contentColor"
-                    android:textSize="20dp"
-                    android:text="지난 업데이트"
-                    android:textStyle="bold"
-                    />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="2dp"
-                    android:layout_marginTop="@dimen/classInfo_viewsMargin"
-                    android:layout_marginBottom="@dimen/classInfo_viewsMargin"
-                    android:background="@color/contentColor"
-                    />
-
-                <TextView
-                    android:paddingTop="8dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text=" ○ 앱 기능"
-                    android:textStyle="bold"
-                    android:textSize="16dp"
-                    android:textColor="@color/contentColor"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="- 노티바(알림 창) 기능을 앱 특성에 맞게 변화를 주었습니다.\n이제 노티바를 통해 빠르게 환산 스탯, 캐릭터정보 등 게임 관련 정보를 찾을 수 있습니다."
-                    android:textColor="@color/contentColor"/>
-
-                <TextView
-                    android:paddingTop="8dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text=" ○ 직업/스킬 정보"
-                    android:textStyle="bold"
-                    android:textSize="16dp"
-                    android:textColor="@color/contentColor"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="- 모든 직업의 신규 6차 마스터리 코어를 추가했습니다."
-                    android:textColor="@color/contentColor"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="- 여러 직업의 크리티컬 확률 수치가 변동되었습니다."
-                    android:textColor="@color/contentColor"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="- 1월 18일 밸?패 를 적용하였습니다. 6차 오리진 스킬의 수치가 크게 변동되었습니다."
-                    android:textColor="@color/contentColor"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="- [그 손가락] 모양이 포함된 스킬 아이콘을 변경했습니다."
-                    android:textColor="@color/contentColor"/>
-
-                <TextView
-                    android:paddingTop="8dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text=" ○ 보스몬스터 정보"
-                    android:textStyle="bold"
-                    android:textSize="16dp"
-                    android:textColor="@color/contentColor"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="- 우르스 정보를 볼 수 없게 했습니다."
-                    android:textColor="@color/contentColor"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="- [수상한 큐브] 보상 정보를 삭제했습니다."
-                    android:textColor="@color/contentColor"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="- [그 손가락] 모양이 포함된 보스 일러스트를 변경했습니다."
-                    android:textColor="@color/contentColor"/>
-
-                <TextView
-                    android:paddingTop="8dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text=" ○ 앱 메뉴"
-                    android:textStyle="bold"
-                    android:textSize="16dp"
-                    android:textColor="@color/contentColor"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="- API를 이용하여 참고하기 좋은 사이트 등과 연결되는 메뉴를 추가했습니다.\n앱을 통해 쉽게 환산 스탯, 메이플지지와 같은 사이트에 접속할 수 있습니다."
-                    android:textColor="@color/contentColor"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="- 게임 공식 홈페이지 메뉴를 다시 활성화 했습니다."
                     android:textColor="@color/contentColor"/>
             </LinearLayout>
 

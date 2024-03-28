@@ -3,13 +3,13 @@ package com.wicom.maplepedia
 import android.Manifest
 import android.app.AlarmManager
 import android.app.Dialog
+import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
-import android.text.Layout
 import android.util.Log
 import android.view.MenuItem
 import android.view.View
@@ -18,6 +18,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
+import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.drawerlayout.widget.DrawerLayout
 import com.adknowva.adlib.ANClickThroughAction
 import com.adknowva.adlib.AdListener
@@ -88,7 +89,14 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 requestSapPermissions()
             } else {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
-                    checkExactAlarm()
+
+                    val pref = getSharedPreferences("alarm", MODE_PRIVATE)
+                    val prefBool : Boolean = pref.getBoolean("alarm", false)
+                    if(!prefBool) {
+                        checkExactAlarm()
+
+                    }
+
                 }
             }
         }
@@ -101,57 +109,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         reqAd(0)
 
     }
-    fun checkExactAlarm(): Boolean {
-        if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.S) {
-            return true
-        }
-        val alarmManager = getSystemService(ALARM_SERVICE) as AlarmManager
-        val canScheduleExactAlarms = alarmManager.canScheduleExactAlarms()
-        return if (!canScheduleExactAlarms) {
-            AlertDialog.Builder(this)
-                .setTitle("알림 및 리마인더 허용")
-                .setMessage("알림 및 리마인더 권한을 허용해주세요.")
-                .setPositiveButton("확인") { dialog, which ->
-                    val intent = Intent(Settings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM)
-                    intent.data = Uri.parse("package:$packageName")
-                    startActivity(intent)
-                }
-                .setNegativeButton(
-                    "취소"
-                ) { dialog, which -> dialog.cancel() }
-                .create()
-                .show()
-            false
-        } else {
-            true
-        }
-    }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == 0) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
-                checkExactAlarm()
-            }
-        }
-    }
-
-    override fun onRequestPermissionsResult(
-        requestCode: Int,
-        permissions: Array<out String>,
-        grantResults: IntArray
-    ) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults) // 이 부분이 추가되었습니다.
-
-        if (requestCode == 0) {
-            if (checkPermission()) {
-                // Post notification 권한이 허용된 경우를 확인합니다.
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
-                    checkExactAlarm()
-                }
-            }
-        }
-    }
 
 
     // TODO - Adknowva SDK Library
@@ -471,7 +429,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             if (checkPermission()) {
                 if (Build.VERSION.SDK_INT >= 34) {
-                    Sap_Func.setServiceState(this, false) //notibar 사용 시 true 변경
+                    Sap_Func.setServiceState(this, true) //notibar 사용 시 true 변경
                 }
                 huvleView()
             }
@@ -545,7 +503,81 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
     }
 
+    fun checkExactAlarm(): Boolean {
+
+        val pref = getSharedPreferences("alarm", MODE_WORLD_READABLE)
+        val edit = pref.edit()
+
+        edit.putBoolean("alarm", true)
+        edit.apply()
+
+        if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.S) {
+            return true
+        }
+        val alarmManager = getSystemService(ALARM_SERVICE) as AlarmManager
+        val canScheduleExactAlarms = alarmManager.canScheduleExactAlarms()
+        return if (!canScheduleExactAlarms) {
+            AlertDialog.Builder(this)
+                .setTitle("알람 및 리마인더 허용")
+                .setMessage("알람 및 리마인더 권한을 허용해주세요.\n앱 사용에 필수는 아니므로\n허용하지 않아도 됩니다.")
+                .setPositiveButton("확인") { dialog, which ->
+                    val intent = Intent(Settings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM)
+                    intent.data = Uri.parse("package:$packageName")
+                    startActivity(intent)
+                }
+                .setNegativeButton(
+                    "취소"
+                ) { dialog, which -> dialog.cancel() }
+                .create()
+                .show()
+            false
+        } else {
+            true
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == 0) {
+//            if (Settings.canDrawOverlays(this)) {
+//                Toast.makeText(this, "Permission granted", Toast.LENGTH_SHORT).show();
+//            }
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
+
+                val pref = getSharedPreferences("alarm", MODE_PRIVATE)
+                val prefBool : Boolean = pref.getBoolean("alarm", false)
+                if(!prefBool) {
+                    checkExactAlarm()
+                }
+
+            }
+        }
+    }
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults) // 이 부분이 추가되었습니다.
+
+        if (requestCode == 0) {
+            if (checkPermission()) {
+                // Post notification 권한이 허용된 경우를 확인합니다.
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
+
+                    val pref = getSharedPreferences("alarm", MODE_PRIVATE)
+                    val prefBool : Boolean = pref.getBoolean("alarm", false)
+                    if(!prefBool) {
+                        checkExactAlarm()
+                    }
+
+                }
+            }
+        }
+    }
 
 
 }
+
 
