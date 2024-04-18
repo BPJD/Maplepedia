@@ -82,7 +82,7 @@ class RefScroll : TabActivity() {
             while (reader.readNext().also { nextRecord = it } != null) {
                 for(j in 0..4) {
                     itemStrs[j] = nextRecord?.get(j)//아이템 정보 1개 가져오기
-                    //Log.i("skill", skillStrs[j].toString())
+                    //Log.i("skill", itemStrs[j].toString())
                 }
                 scrollAdd() //스킬 하나 레이아웃 생성하고, 거기에 가져온 스킬 정보 붙이기.
             } //해당 과정을 테이블 행의 수만큼 반복
@@ -93,7 +93,7 @@ class RefScroll : TabActivity() {
 
     private fun scrollAdd() {
 
-        var scrollLayout: LinearLayout = findViewById(R.id.ref_scroll_weapon_Pos)
+        var scrollLayout: LinearLayout? = null
         when(itemStrs[1]?.toInt()) {
             0 -> scrollLayout = findViewById(R.id.ref_scroll_weapon_Pos)
             1 -> scrollLayout = findViewById(R.id.ref_scroll_armor_Pos)
@@ -104,6 +104,7 @@ class RefScroll : TabActivity() {
         val inflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val rowView: View = inflater.inflate(R.layout.layout_guide_scroll, null) //스킬 레이아웃 생성
         scrollLayout!!.addView(rowView, scrollLayout!!.childCount)
+
 
         val scrollIcon: ImageView = rowView.findViewById(R.id.guide_info_ScrollIcon)
         val mDrawableName = "guide_scroll_" + itemStrs[0]
@@ -117,6 +118,7 @@ class RefScroll : TabActivity() {
         textScrollName.text = itemStrs[2]
         textScrollDesc.text = itemStrs[3]?.replace("\\n", "\n")
         textScrollEtc.text = itemStrs[4]?.replace("\\n", "\n")
+
     }
 
 

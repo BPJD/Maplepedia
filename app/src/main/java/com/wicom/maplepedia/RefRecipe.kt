@@ -94,7 +94,7 @@ class RefRecipe : AppCompatActivity() {
             while (reader.readNext().also { nextRecord = it } != null) {
                 for(j in 0..3) {
                     itemStrs[j] = nextRecord?.get(j)//아이템 정보 1개 가져오기
-                    //Log.i("skill", skillStrs[j].toString())
+                    //Log.i("skill", itemStrs[j].toString())
                 }
                 recipeAdd() //스킬 하나 레이아웃 생성하고, 거기에 가져온 스킬 정보 붙이기.
             } //해당 과정을 테이블 행의 수만큼 반복
