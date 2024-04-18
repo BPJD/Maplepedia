@@ -429,7 +429,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             if (checkPermission()) {
                 if (Build.VERSION.SDK_INT >= 34) {
-                    Sap_Func.setServiceState(this, true) //notibar 사용 시 true 변경
+                    //Sap_Func.setNotiBarState(this, true)
+                    //Sap_Func.setServiceState(this, true) //notibar 사용 시 true 변경
                 }
                 huvleView()
             }
