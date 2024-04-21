@@ -13,6 +13,8 @@ import com.wicom.maplepedia.MainActivity;
 import com.wicom.maplepedia.R;
 import com.wicom.maplepedia.RefWeaponOptionActivity;
 
+import java.util.Locale;
+
 public class CustomNotibarConfig extends NotibarConfig {
 
 /*
@@ -22,21 +24,11 @@ public class CustomNotibarConfig extends NotibarConfig {
     또는 return R.drawable.res_sap_notiba_img;
     drawable-ko, drawable-vi...... 폴더 만들어서 동일한 이름으로 언어별 셋팅
 */
-//    @Override
-//    public int getNotibarPopupBg() {
-//        switch (Locale.getDefault().getLanguage()) {
-//            case "ko":
-//                return R.drawable.res_sap_notiba_img_cn;
-//            case "zh":
-//                return R.drawable.res_sap_notiba_img_cn;
-//            case "vi":
-//                return R.drawable.res_sap_notiba_img_vi;
-//            case "ja":
-//                return R.drawable.res_sap_notiba_img_ja;
-//            default:
-//                return R.drawable.res_sap_notiba_img_en;
-//        }
-//    }
+
+    @Override
+    public int getNotibarPopupBg() {
+        return R.drawable.res_sap_notiba_img;
+    }
 
 
 /*

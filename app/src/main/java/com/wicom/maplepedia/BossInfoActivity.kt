@@ -243,9 +243,9 @@ class BossInfoActivity : TabActivity() {
 
         val pattern: TextView = rowView.findViewById((R.id.boss_pattern_text))
         pattern.text = patt.replace("\\n", "\n")
-        if(patt == "기본 패턴" || patt == "1페이즈" || patt == "2페이즈" || patt == "3페이즈" || patt == "4페이즈" || patt == "맵 패턴") {
+        if(patt == "기본 패턴" || patt == "1페이즈" || patt == "2페이즈" || patt == "3페이즈" || patt == "4페이즈" || patt == "맵 패턴" || patt == "공멸형 패턴") {
             pattern.setPadding(12, 32, 0, 0)
-            pattern.setTextSize(20f)
+            pattern.setTextSize(18f)
         }
 
     }
