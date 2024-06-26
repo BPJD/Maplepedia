@@ -14,7 +14,7 @@ android {
     defaultConfig {
         applicationId "com.wicom.maplepedia"
         targetSdk 34
-        versionCode 441
+        versionCode 442
         versionName '24.1.4'
         minSdk 24
         //compileSdkPreview = "UpsideDownCake"
