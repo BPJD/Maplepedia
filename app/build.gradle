@@ -82,7 +82,7 @@ dependencies {
      * huvle sdk , play-service-ads
      */
     implementation 'com.google.android.gms:play-services-ads:23.2.0'
-    implementation 'com.byappsoft.sap:HuvleSDK:6.2.1'
+    implementation 'com.byappsoft.sap:HuvleSDK:6.2.1.1'
     implementation 'com.adknowva.adlib:AdknowvaAdLib:1.5.2'
 
 
