@@ -1,34 +1,23 @@
 package com.wicom.maplepedia
 
-import android.Manifest
-import android.app.AlarmManager
 import android.app.Dialog
-import android.content.Context
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
-import android.provider.Settings
 import android.util.Log
 import android.view.MenuItem
 import android.view.View
 import android.widget.TextView
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
-import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.drawerlayout.widget.DrawerLayout
 import com.adknowva.adlib.ANClickThroughAction
 import com.adknowva.adlib.AdListener
 import com.adknowva.adlib.BannerAdView
 import com.adknowva.adlib.NativeAdResponse
 import com.adknowva.adlib.ResultCode
-import com.byappsoft.sap.browser.Sap_BrowserActivity
-import com.byappsoft.sap.browser.Sap_MainActivity
-import com.byappsoft.sap.launcher.Sap_act_main_launcher
-import com.byappsoft.sap.utils.Sap_Func
 import com.gomfactory.adpie.sdk.AdPieError
 import com.gomfactory.adpie.sdk.AdPieSDK
 import com.gomfactory.adpie.sdk.AdView
@@ -49,8 +38,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     var isAdLoaded: Boolean = false
     private var adpieView: AdView? = null
     lateinit var adknowvaView: BannerAdView
-    lateinit var adknowvaPop: BannerAdView
     private var admobView: AdManagerAdView? = null
+    private var adpieViewPop: AdView? = null
+    private var admobViewPop: AdManagerAdView? = null
 // TODO - AdNetWork
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -83,23 +73,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         //adRequest = setupNativeAd();
         //adRequest.loadAd();
 
-        // 안드로이드 13 이상 알림권한 확인
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            if (!checkPermission()) {
-                requestSapPermissions()
-            } else {
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
-
-                    val pref = getSharedPreferences("alarm", MODE_PRIVATE)
-                    val prefBool : Boolean = pref.getBoolean("alarm", false)
-                    if(!prefBool) {
-                        checkExactAlarm()
-
-                    }
-
-                }
-            }
-        }
 
         adknowvaView = findViewById(R.id.banner_view)
         admobView = findViewById(R.id.adManagerAdView)
@@ -111,53 +84,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
 
-
-    // TODO - Adknowva SDK Library
-    private fun setHuvlePop(dialog : Dialog) {
-
-        adknowvaPop = dialog.findViewById(R.id.dialog_pop_view)
-
-        Log.v("HuvlePOP", adknowvaPop.toString())
-
-        // 정적으로 구현시(When if apply Static Implementation) BannerAdView Start
-        adknowvaPop.placementID = "testbig" // 320*50 banner testID , 300*250 banner test ID "testbig", 32050 Z916x23725,  300250 Zzo598u6rz
-        adknowvaPop.shouldServePSAs = false
-        adknowvaPop.clickThroughAction = ANClickThroughAction.OPEN_DEVICE_BROWSER
-        adknowvaPop.setAdSize(300, 250) //bav.setAdSize(300, 250);
-        // Resizes the container size to fit the banner ad
-        adknowvaPop.resizeAdToFitContainer = true
-//        bav.setExpandsToFitScreenWidth(true)
-        val adListener: AdListener = object : AdListener {
-            override fun onAdRequestFailed(
-                bav: com.adknowva.adlib.AdView,
-                errorCode: ResultCode
-            ) {
-                if (errorCode == null) {
-                    Log.v("HuvlePOP", "Call to loadAd failed")
-                } else {
-                    Log.v("HuvlePOP", "Ad request failed: $errorCode")
-                }
-                bav.visibility = View.INVISIBLE
-
-                //adpieView?.visibility = View.GONE
-                //setAdpieAD()
-            }
-            override fun onAdLoaded(ba: com.adknowva.adlib.AdView) {
-                Log.v("HuvlePOP", "The Ad Loaded!")
-            }
-            override fun onAdLoaded(nativeAdResponse: NativeAdResponse) {}
-            override fun onAdExpanded(bav: com.adknowva.adlib.AdView) {}
-            override fun onAdCollapsed(bav: com.adknowva.adlib.AdView) {}
-            override fun onAdClicked(bav: com.adknowva.adlib.AdView) {}
-            override fun onAdClicked(adView: com.adknowva.adlib.AdView, clickUrl: String) {}
-            override fun onLazyAdLoaded(adView: com.adknowva.adlib.AdView) {}
-        }
-        adknowvaPop.adListener = adListener
-        adknowvaPop.loadAd()
-
-    }
-
-    // TODO - Adknowva SDK Library
     private fun setHuvleAD() {
 
         // 정적으로 구현시(When if apply Static Implementation) BannerAdView Start
@@ -180,7 +106,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 }
                 bav.visibility = View.INVISIBLE
                 if(!isAdLoaded) {
-                    reqAd(2)
+
                 }
                 //adpieView?.visibility = View.GONE
                 //setAdpieAD()
@@ -230,7 +156,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
             override fun onAdFailedToLoad(adError: LoadAdError) {
                 Log.v("GoogleAD", "The Ad failed!")
-                //reqAd(1)
+                reqAd(1)
             }
 
             override fun onAdOpened() {}
@@ -262,7 +188,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 Log.e("adPie", errorMessage)
 
                 if(!isAdLoaded) {
-
+                    reqAd(2)
                 }
             }
 
@@ -285,6 +211,60 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         super.onDestroy()
     }
 
+
+    private fun setGoogleADPop() {
+
+        MobileAds.initialize(
+            this
+        ) { }
+        val adRequest = AdRequest.Builder().build()
+        admobViewPop!!.loadAd(adRequest)
+        admobViewPop!!.setAdListener(object : com.google.android.gms.ads.AdListener() {
+            override fun onAdLoaded() {
+                Log.v("GoogleADPop", "The Ad Loaded!")
+                adpieViewPop?.visibility = View.INVISIBLE
+                admobViewPop!!.visibility = View.VISIBLE
+            }
+
+            override fun onAdFailedToLoad(adError: LoadAdError) {
+                Log.v("GoogleADPop", "The Ad failed!")
+            }
+
+            override fun onAdOpened() {}
+            override fun onAdClicked() {}
+            override fun onAdClosed() {}
+        })
+    }
+
+
+    private fun setAdpieADPop() {
+        adpieViewPop?.load()
+        adpieResultPop()
+    }
+
+    private fun adpieResultPop() {
+        adpieViewPop!!.setAdListener(object : AdView.AdListener {
+            override fun onAdLoaded() {
+                // 광고 표출 성공 후 이벤트 발생
+                adpieViewPop?.visibility = View.VISIBLE
+                admobViewPop!!.visibility = View.INVISIBLE
+                Log.i("adPiePop", "AdPie Loaded!")
+            }
+
+            override fun onAdFailedToLoad(errorCode: Int) {
+                // 광고 요청 또는 표출 실패 후 이벤트 발생
+                val errorMessage = AdPieError.getMessage(errorCode)
+                Log.e("adPiePop", errorMessage)
+
+                setGoogleADPop()
+            }
+
+            override fun onAdClicked() {
+                // 광고 클릭 후 이벤트 발생
+            }
+        })
+    }
+
     fun customExitDialog() {
         // creating custom dialog
         val dialog = Dialog(this)
@@ -292,14 +272,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         // setting content view to dialog
         dialog.setContentView(R.layout.dialog_profile)
 
-        adknowvaPop = dialog.findViewById(R.id.dialog_pop_view)
-
-
-
 
         // getting reference of TextView
         val dialogButtonYes = dialog.findViewById(R.id.dialog_yes) as TextView
         val dialogButtonNo = dialog.findViewById(R.id.dialog_no) as TextView
+        adpieViewPop = dialog.findViewById(R.id.adpie_Tbanner)
+        admobViewPop = dialog.findViewById(R.id.adManagerAdView)
+        setAdpieADPop()
 
         // click listener for No
         dialogButtonNo.setOnClickListener { // dismiss the dialog
@@ -314,8 +293,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         // show the exit dialog
         dialog.show()
 
-        //setHuvlePop(dialog)
     }
+
+
+
     //THis code is written by Ujjwal kumar bhardwaj
 
     override fun onBackPressed() {   // 뒤로가기 누르면 다이얼로그 생성
@@ -368,52 +349,35 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 //                nextIntent = Intent(this, SimulatorGenesis::class.java)
 //            }
 
-            R.id.menu_huvle-> {
-                nextIntent = Intent(this, Sap_MainActivity::class.java)
-                nextIntent.putExtra(Sap_BrowserActivity.PARAM_OPEN_URL, "https://www.huvle.com/")
-            }
-
-
             R.id.menu_maplegg-> {
-                nextIntent = Intent(this, Sap_MainActivity::class.java)
-                nextIntent.putExtra(Sap_BrowserActivity.PARAM_OPEN_URL, "https://maple.gg/")
+                nextIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://maple.gg/"))
             }
 
             R.id.menu_stat-> {
-                nextIntent = Intent(this, Sap_MainActivity::class.java)
-                nextIntent.putExtra(Sap_BrowserActivity.PARAM_OPEN_URL, "https://maplescouter.com/")
+                nextIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://maplescouter.com/"))
             }
 
             R.id.menu_starforce-> {
-                nextIntent = Intent(this, Sap_MainActivity::class.java)
-                nextIntent.putExtra(Sap_BrowserActivity.PARAM_OPEN_URL, "https://mesu.live/sim/starforce")
+                nextIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://mesu.live/sim/starforce"))
             }
-
-
 
             R.id.menu_notice-> {
-                nextIntent = Intent(this, Sap_MainActivity::class.java)
-                nextIntent.putExtra(Sap_BrowserActivity.PARAM_OPEN_URL, "https://m.maplestory.nexon.com/News/Notice")
+                nextIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://m.maplestory.nexon.com/News/Notice"))
             }
             R.id.menu_update-> {
-                nextIntent = Intent(this, Sap_MainActivity::class.java)
-                nextIntent.putExtra(Sap_BrowserActivity.PARAM_OPEN_URL, "https://m.maplestory.nexon.com/News/Update")
+                nextIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://m.maplestory.nexon.com/News/Update"))
             }
             R.id.menu_event-> {
-                nextIntent = Intent(this, Sap_MainActivity::class.java)
-                nextIntent.putExtra(Sap_BrowserActivity.PARAM_OPEN_URL, "https://m.maplestory.nexon.com/News/Event")
+                nextIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://m.maplestory.nexon.com/News/Event"))
             }
             R.id.menu_community-> {
-                nextIntent = Intent(this, Sap_MainActivity::class.java)
-                nextIntent.putExtra(Sap_BrowserActivity.PARAM_OPEN_URL, "https://m.maplestory.nexon.com/Community/N23Free")
+                nextIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://m.maplestory.nexon.com/Community/N23Free"))
             }
             R.id.menu_ranking-> {
-                nextIntent = Intent(this, Sap_MainActivity::class.java)
-                nextIntent.putExtra(Sap_BrowserActivity.PARAM_OPEN_URL, "https://m.maplestory.nexon.com/N23Ranking/World/Total")
+                nextIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://m.maplestory.nexon.com/N23Ranking/World/Total"))
             }
             R.id.menu_tserver-> {
-                nextIntent = Intent(this, Sap_MainActivity::class.java)
-                nextIntent.putExtra(Sap_BrowserActivity.PARAM_OPEN_URL, "https://maplestory.nexon.com/Testworld/Main")
+                nextIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://maplestory.nexon.com/Testworld/Main"))
             }
 
         }
@@ -422,161 +386,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         return false
     }
 
-
-    override fun onResume() {
-        super.onResume()
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            if (checkPermission()) {
-                if (Build.VERSION.SDK_INT >= 34) {
-                    //Sap_Func.setNotiBarState(this, true)
-                    //Sap_Func.setServiceState(this, true) //notibar 사용 시 true 변경
-                }
-                huvleView()
-            }
-        } else {
-            huvleView()
-        }
-    }
-
-    private fun huvleView() {
-
-        // TODO-- huvleView apply
-        Sap_Func.setNotiBarLockScreen(this,false)
-        Sap_act_main_launcher.initsapStart(this,"judei1028",true,true,
-            object : Sap_act_main_launcher.OnLauncher {
-                override fun onDialogOkClicked() {
-                    checkDrawOverlayPermission()
-                }
-
-                override fun onDialogCancelClicked() {
-                }
-
-                override fun onInitSapStartapp() {
-                }
-
-                override fun onUnknown() {
-                }
-
-            })
-    }
-
-    private fun checkPermission(): Boolean {
-        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            checkSelfPermission(Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED
-        } else true
-    }
-
-    private fun requestSapPermissions() {
-        try {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) requestPermissions(
-                arrayOf(
-                    Manifest.permission.POST_NOTIFICATIONS
-                ), 0
-            )
-        } catch (ignored: Exception) {
-        }
-    }
-
-    private	fun checkDrawOverlayPermission(): Boolean {
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
-            return true
-        }
-        return if (!Settings.canDrawOverlays(this)) {
-            AlertDialog.Builder(this)
-                .setTitle("다른앱 위에 그리기")
-                .setMessage("허블뷰 사용을 위한 권한입니다.\n앱 사용에 필수는 아니므로\n허용하지 않아도 됩니다.")
-                .setPositiveButton("확인") { dialog, which ->
-                    val intent = Intent()
-                    intent.action = Settings.ACTION_MANAGE_OVERLAY_PERMISSION
-                    val uri = Uri.parse("package:$packageName")
-                    intent.data = uri
-                    startActivity(intent)
-                }
-                .setNegativeButton(
-                    "취소"
-                ) { dialog, which -> dialog.cancel() }
-                .create()
-                .show()
-            false
-        } else {
-            true
-        }
-    }
-
-    fun checkExactAlarm(): Boolean {
-
-        val pref = getSharedPreferences("alarm", MODE_WORLD_READABLE)
-        val edit = pref.edit()
-
-        edit.putBoolean("alarm", true)
-        edit.apply()
-
-        if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.S) {
-            return true
-        }
-        val alarmManager = getSystemService(ALARM_SERVICE) as AlarmManager
-        val canScheduleExactAlarms = alarmManager.canScheduleExactAlarms()
-        return if (!canScheduleExactAlarms) {
-            AlertDialog.Builder(this)
-                .setTitle("알람 및 리마인더 허용")
-                .setMessage("알람 및 리마인더 권한을 허용해주세요.\n앱 사용에 필수는 아니므로\n허용하지 않아도 됩니다.")
-                .setPositiveButton("확인") { dialog, which ->
-                    val intent = Intent(Settings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM)
-                    intent.data = Uri.parse("package:$packageName")
-                    startActivity(intent)
-                }
-                .setNegativeButton(
-                    "취소"
-                ) { dialog, which -> dialog.cancel() }
-                .create()
-                .show()
-            false
-        } else {
-            true
-        }
-    }
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == 0) {
-//            if (Settings.canDrawOverlays(this)) {
-//                Toast.makeText(this, "Permission granted", Toast.LENGTH_SHORT).show();
-//            }
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
-
-                val pref = getSharedPreferences("alarm", MODE_PRIVATE)
-                val prefBool : Boolean = pref.getBoolean("alarm", false)
-                if(!prefBool) {
-                    checkExactAlarm()
-                }
-
-            }
-        }
-    }
-
-    override fun onRequestPermissionsResult(
-        requestCode: Int,
-        permissions: Array<out String>,
-        grantResults: IntArray
-    ) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults) // 이 부분이 추가되었습니다.
-
-        if (requestCode == 0) {
-            if (checkPermission()) {
-                // Post notification 권한이 허용된 경우를 확인합니다.
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
-
-                    val pref = getSharedPreferences("alarm", MODE_PRIVATE)
-                    val prefBool : Boolean = pref.getBoolean("alarm", false)
-                    if(!prefBool) {
-                        checkExactAlarm()
-                    }
-
-                }
-            }
-        }
-    }
 
 
 }

@@ -17,4 +17,6 @@
     <color name="blue">#8000AFFF</color>
     <color name="nam">#001450</color>
     <color name="purple">#A400DF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
 </resources>

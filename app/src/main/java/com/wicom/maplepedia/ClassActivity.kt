@@ -40,13 +40,6 @@ import java.util.LinkedList
 
 class ClassActivity : TabActivity() {
 
-    private lateinit var adRequest: NativeAdRequest
-    private lateinit var layoutNative: LinearLayout
-    private val TAG = "NativeAd"
-    //NA 테스트용 트래픽 : apptest-native
-    //NA 내 트래픽 : Z449k4s400
-    private val nativePlacementId = "Z449k4s400"
-//apptest-native
 // TODO - AdNetWork
     var isAdLoaded: Boolean = false
     private var adpieView: AdView? = null
@@ -86,30 +79,13 @@ class ClassActivity : TabActivity() {
         admobView = findViewById(R.id.adManagerAdView)
         adpieView = findViewById(R.id.adpie_Tbanner)
 
-        huvleNateAd()
-
         // 광고 연동을 위한 슬롯 ID를 필수로 입력한다.
         reqAd(0)
     }
 
     // TODO - Adknowva SDK Library
     private fun setHuvleAD() {
-        /*
-            정적 구현부와 동적구현부는 참고하시어 하나만 적용하시기 바랍니다.(With checking the implementation guide below, please apply Implementation either only Dynamic or Static.)
-            initBannerView 아이디 "test" 값은 http://ssp.huvle.com/ 에서 가입 > 매체생성 > zoneid 입력후 테스트 하시고, release시점에 허블에 문의주시면 인증됩니다. 배너사이즈는 변경하지 마세요.(For the “test” value below, please go to http://ssp.huvle.com/ to sign up > create media > Test your app after typing zoneid. Next, contact Huvle before releasing your app for authentication. You must not change the banner size.)
-        */
 
-//        // 동적으로 구현시(When if apply Dynamic Implementation) BannerAdView Start
-//        bav = BannerAdView(this)
-//        layout = findViewById<View>(R.id.adview_container) as RelativeLayout
-//        val layoutParams = RelativeLayout.LayoutParams(
-//            RelativeLayout.LayoutParams.WRAP_CONTENT,
-//            RelativeLayout.LayoutParams.WRAP_CONTENT
-//        )
-//        layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM)
-//        layoutParams.addRule(RelativeLayout.CENTER_HORIZONTAL)
-//        bav!!.layoutParams = layoutParams
-//        layout!!.addView(bav)
 
         // 정적으로 구현시(When if apply Static Implementation) BannerAdView Start
         adknowvaView.placementID = "Z916x23725" // 320*50 banner testID , 300*250 banner test ID "testbig", 32050 Z916x23725,  300250 Zzo598u6rz
@@ -131,7 +107,6 @@ class ClassActivity : TabActivity() {
                 }
                 bav.visibility = View.INVISIBLE
                 if(!isAdLoaded) {
-                    reqAd(2)
                 }
                 //adpieView?.visibility = View.GONE
                 //setAdpieAD()
@@ -181,7 +156,7 @@ class ClassActivity : TabActivity() {
 
             override fun onAdFailedToLoad(adError: LoadAdError) {
                 Log.v("GoogleAD", "The Ad failed!")
-                //reqAd(1)
+                reqAd(1)
             }
 
             override fun onAdOpened() {}
@@ -213,7 +188,7 @@ class ClassActivity : TabActivity() {
                 Log.e("adPie", errorMessage)
 
                 if(!isAdLoaded) {
-                    setHuvleAD()
+                    reqAd(2)
                 }
             }
 
@@ -227,7 +202,6 @@ class ClassActivity : TabActivity() {
 
         admobView?.destroy()
         adknowvaView?.destroy()
-        layoutNative.removeAllViews()
 
         if (adpieView != null) {
             adpieView!!.destroy();
@@ -275,171 +249,7 @@ class ClassActivity : TabActivity() {
     }
 
 
-    private fun huvleNateAd() {
-        //Log.e(TAG,"native Ad")
-//        layoutNative = binding.layoutNative
-        layoutNative = findViewById(R.id.layout_native)
 
-        adRequest = setupNativeAd()
-        adRequest.loadAd()
-        adRequest.clickThroughAction = ANClickThroughAction.OPEN_DEVICE_BROWSER
-    }
-
-
-    private fun setupNativeAd(): NativeAdRequest {
-        val adRequest = NativeAdRequest(this, nativePlacementId)
-        adRequest.shouldLoadImage(true)
-        adRequest.shouldLoadIcon(true)
-        adRequest.listener = object : NativeAdRequestListener {
-            override fun onAdLoaded(response: NativeAdResponse) {
-                Log.d("main", "Native Ad Loaded")
-                layoutNative.visibility = View.VISIBLE
-                handleNativeResponse(response)
-
-            }
-
-            override fun onAdFailed(errorcode: ResultCode, adResponseInfo: ANAdResponseInfo?) {
-                Log.e(
-                    "main",
-                    "Native Ad Failed:$errorcode"
-                )
-            }
-        }
-        return adRequest
-    }
-
-    private fun handleNativeResponse(response: NativeAdResponse) {
-        val builder = NativeAdBuilder(this)
-        if (response.icon != null) builder.setIconView(response.icon)
-        if (response.image != null) builder.setImageView(response.image)
-        builder.setTitle(response.title)
-        builder.setDescription(response.description)
-        builder.setCallToAction(response.callToAction)
-        builder.setSponsoredBy(response.sponsoredBy)
-        if (response.adStarRating != null) {
-            builder.setAdStartValue(response.adStarRating.value.toString() + "/" + response.adStarRating.scale.toString())
-        }
-
-        // register all the views
-        if (builder.container.parent != null) (builder.container.parent as ViewGroup).removeAllViews()
-
-        // register tracking
-        NativeAdSDK.registerTracking(
-            response,
-            builder.container,
-            builder.allViews,
-            object : NativeAdEventListener {
-                override fun onAdWasClicked() {
-                    Log.i(TAG, "onAdWasClicked")
-                }
-
-                override fun onAdWillLeaveApplication() {
-                    Log.i(TAG, "onAdWillLeaveApplication")
-                }
-
-                override fun onAdWasClicked(clickUrl: String, fallbackURL: String) {
-                    Log.i(
-                        TAG,
-                        "onAdWasClicked:$clickUrl, $fallbackURL"
-                    )
-                }
-
-                override fun onAdImpression() {
-                    Log.i(TAG, "onAdImpression")
-                }
-
-                override fun onAdAboutToExpire() {
-                    Log.i(TAG, "onAdAboutToExpire")
-                }
-
-                override fun onAdExpired() {
-                    Log.i(TAG, "onAdExpired")
-                }
-            })
-        val nativeContainer = builder.container
-        Handler(Looper.getMainLooper()).post {
-            layoutNative.removeAllViews()
-            layoutNative.addView(nativeContainer)
-
-
-            // impression tracking
-            NativeAdSDK.fireImpressionTracker(applicationContext, response)
-        }
-    }
-
-
-    internal class NativeAdBuilder @SuppressLint("NewApi") constructor(context: Context?) {
-        private var nativeAdContainer: RelativeLayout
-        private var iconAndTitle: LinearLayout? = null
-        private var customViewLayout: LinearLayout? = null
-        private var imageView: ImageView
-        private var iconView: ImageView
-        private var title: TextView
-        private var description: TextView
-        private var callToAction: TextView
-        private var adStarRating: TextView? = null
-        private var sponsoredBy: TextView? = null
-        private var views: LinkedList<View>? = null
-
-        init {
-            nativeAdContainer =
-                View.inflate(context, R.layout.layout_native_item, null) as RelativeLayout
-            iconView = nativeAdContainer.findViewById<ImageView>(R.id.native_icon_image)
-            imageView = nativeAdContainer.findViewById<ImageView>(R.id.native_main_image)
-            title = nativeAdContainer.findViewById<TextView>(R.id.native_title)
-            description = nativeAdContainer.findViewById<TextView>(R.id.native_text)
-            callToAction = nativeAdContainer.findViewById(R.id.native_cta);
-//            sponsoredBy = nativeAd.findViewById(R.id.native_sponsored_by);
-        }
-        fun setImageView(bitmap: Bitmap?) {
-            imageView.setImageBitmap(bitmap)
-        }
-
-        fun setIconView(bitmap: Bitmap?) {
-            iconView.setImageBitmap(bitmap)
-        }
-
-        fun setCustomView(customView: View?) {
-            customViewLayout?.addView(customView)
-        }
-
-        fun setTitle(title: String?) {
-            this.title.text = title
-        }
-
-        fun setDescription(description: String?) {
-            this.description.text = description
-        }
-
-        fun setCallToAction(callToAction: String?) {
-            this.callToAction.text = callToAction
-        }
-
-        fun setSponsoredBy(sponsoredBy: String?) {
-            this.sponsoredBy?.text = sponsoredBy
-        }
-
-        fun setAdStartValue(value: String?) {
-            adStarRating?.text = value
-        }
-
-        val container: RelativeLayout
-            get() = nativeAdContainer
-        val allViews: LinkedList<View>
-            get() {
-                if (views == null) {
-                    views = LinkedList()
-                    views!!.add(imageView)
-                    views!!.add(iconView)
-                    views!!.add(title)
-                    views!!.add(description)
-                    callToAction.let { views!!.add(it) }
-                    adStarRating?.let { views!!.add(it) }
-                    sponsoredBy?.let { views!!.add(it) }
-                }
-                return views!!
-            }
-    }
 
 
 }

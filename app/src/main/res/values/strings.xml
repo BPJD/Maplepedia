@@ -1,7 +1,11 @@
 <resources>
     <string name="app_name">메이플 백과사전</string>
-    <string name="googleADTest">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="googleADTest">ca-app-pub-3940256099942544/9214589741</string>
+
     <string name="googleAD">ca-app-pub-9059110441488815/3395688889</string>
+    <string name="googleADPop">ca-app-pub-9059110441488815/4354058495</string>
+
+
 
     <string name="noti_1">앱 실행</string>
     <string name="noti_2">캐릭터검색</string>

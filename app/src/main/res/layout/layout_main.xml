@@ -67,7 +67,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="- 영웅의 메아리 계열 스킬의 재사용 대기시간이 변경됐습니다."
+                    android:text="- 9월 12일 밸런스 패치 내용 적용"
                     android:textColor="@color/contentColor"/>
 
                 <TextView
@@ -81,24 +81,13 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="- 익셉셔널 해머를 추가하고, 기존 익셉셔널 아이템은 삭제했습니다."
+                    android:text="- 칼로스 패턴 정보 수정"
                     android:textColor="@color/contentColor"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="- 결정석 아이콘을 일간/주간/월간에 맞게 변경했습니다. 가격도 현재 상황에 맞게 내용을 수정했습니다."
+                    android:text="- 카링 팁 내용 추가"
                     android:textColor="@color/contentColor"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="- 일부 보스의 팁 정보를 수정했습니다."
-                    android:textColor="@color/contentColor"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="- 보스 보상 정보에 추가하기 민망할 정도로 보스 컷에 비해 가치가 너무 낮은 보상은 삭제했습니다. 예를 들자면.. 하드 듄켈에서 주는 꺼지지 않는 불꽃 같은 경우 말이에요."
-                    android:textColor="@color/contentColor"/>
-
 
             </LinearLayout>
 
@@ -137,7 +126,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="- 아란, 은월 리마스터 적용"
+                    android:text="- 영웅의 메아리 계열 스킬의 재사용 대기시간이 변경됐습니다."
                     android:textColor="@color/contentColor"/>
 
                 <TextView
@@ -151,19 +140,23 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="- 수상한 에디셔널 큐브 보상을 지웠습니다."
+                    android:text="- 익셉셔널 해머를 추가하고, 기존 익셉셔널 아이템은 삭제했습니다."
                     android:textColor="@color/contentColor"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="- 칼로스의 상대 팁 내용을 추가했습니다."
+                    android:text="- 결정석 아이콘을 일간/주간/월간에 맞게 변경했습니다. 가격도 현재 상황에 맞게 내용을 수정했습니다."
                     android:textColor="@color/contentColor"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="- 검은 마법사의 상대 팁 내용을 추가했습니다."
+                    android:text="- 일부 보스의 팁 정보를 수정했습니다."
                     android:textColor="@color/contentColor"/>
-
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="- 보스 보상 정보에 추가하기 민망할 정도로 보스 컷에 비해 가치가 너무 낮은 보상은 삭제했습니다. 예를 들자면.. 하드 듄켈에서 주는 꺼지지 않는 불꽃 같은 경우 말이에요."
+                    android:textColor="@color/contentColor"/>
             </LinearLayout>
 
 

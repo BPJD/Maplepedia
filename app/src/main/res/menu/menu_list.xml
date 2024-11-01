@@ -87,11 +87,6 @@
                 android:id="@+id/menu_option"
                 android:title="앱 설정" />
             -->
-            <item
-                android:id="@+id/menu_huvle"
-                android:icon="@drawable/huvle_notibar_icon"
-                android:iconTint="@color/classIcon"
-                android:title="허블 브라우저" />
 
             <item
                 android:id="@+id/menu_dev"

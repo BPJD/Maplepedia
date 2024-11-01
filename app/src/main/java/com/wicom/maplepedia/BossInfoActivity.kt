@@ -262,22 +262,6 @@ class BossInfoActivity : TabActivity() {
     }
 
     private fun setHuvleAD() {
-        /*
-            정적 구현부와 동적구현부는 참고하시어 하나만 적용하시기 바랍니다.(With checking the implementation guide below, please apply Implementation either only Dynamic or Static.)
-            initBannerView 아이디 "test" 값은 http://ssp.huvle.com/ 에서 가입 > 매체생성 > zoneid 입력후 테스트 하시고, release시점에 허블에 문의주시면 인증됩니다. 배너사이즈는 변경하지 마세요.(For the “test” value below, please go to http://ssp.huvle.com/ to sign up > create media > Test your app after typing zoneid. Next, contact Huvle before releasing your app for authentication. You must not change the banner size.)
-        */
-
-//        // 동적으로 구현시(When if apply Dynamic Implementation) BannerAdView Start
-//        bav = BannerAdView(this)
-//        layout = findViewById<View>(R.id.adview_container) as RelativeLayout
-//        val layoutParams = RelativeLayout.LayoutParams(
-//            RelativeLayout.LayoutParams.WRAP_CONTENT,
-//            RelativeLayout.LayoutParams.WRAP_CONTENT
-//        )
-//        layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM)
-//        layoutParams.addRule(RelativeLayout.CENTER_HORIZONTAL)
-//        bav!!.layoutParams = layoutParams
-//        layout!!.addView(bav)
 
         // 정적으로 구현시(When if apply Static Implementation) BannerAdView Start
         adknowvaView.placementID = "Z916x23725" // 320*50 banner testID , 300*250 banner test ID "testbig", 32050 Z916x23725,  300250 Zzo598u6rz
@@ -299,7 +283,7 @@ class BossInfoActivity : TabActivity() {
                 }
                 bav.visibility = View.INVISIBLE
                 if(!isAdLoaded) {
-                    setGoogleAD()
+
                 }
                 //adpieView?.visibility = View.GONE
                 //setAdpieAD()
@@ -341,6 +325,7 @@ class BossInfoActivity : TabActivity() {
 
             override fun onAdFailedToLoad(adError: LoadAdError) {
                 Log.v("GoogleAD", "The Ad failed!")
+                setHuvleAD()
             }
 
             override fun onAdOpened() {}
@@ -372,7 +357,7 @@ class BossInfoActivity : TabActivity() {
                 Log.e("adPie", errorMessage)
 
                 if(!isAdLoaded) {
-                    setHuvleAD()
+                    setGoogleAD()
                 }
             }
 

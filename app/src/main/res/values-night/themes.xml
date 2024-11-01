@@ -5,18 +5,12 @@
         <item name="colorPrimary">@color/bg_button</item>
         <item name="colorPrimaryVariant">@color/orange</item>
         <item name="colorOnPrimary">@color/white</item>
+        <item name="android:statusBarColor">@color/black</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/orange</item>
         <item name="colorSecondaryVariant">@color/blue</item>
         <item name="colorOnSecondary">@color/nam</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">@color/black</item>
-        <!-- Customize your theme here. -->
     </style>
 
-    <!-- Notibar darkmode text color custom -->
-    <style name="HuvleStatusbar" parent="@android:style/TextAppearance">
-        <item name="android:textColor">#f4f4f4</item>
-    </style>
 
 </resources>
